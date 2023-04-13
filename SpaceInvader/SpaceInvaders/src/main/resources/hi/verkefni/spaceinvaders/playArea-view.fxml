@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<AnchorPane fx:id="playArea" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <ImageView fx:id="Spilari" fitHeight="100.0" fitWidth="200.0" layoutX="200.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true" />
+        <!-- add other nodes here -->
+    </children>
+</AnchorPane>
