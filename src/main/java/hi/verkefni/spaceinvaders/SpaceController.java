@@ -12,6 +12,8 @@ import javafx.util.Duration;
 import java.util.HashMap;
 
 public class SpaceController {
+
+
     private Timeline time;
     @FXML
     private Leikbord fxLeikbord;
@@ -22,6 +24,10 @@ public class SpaceController {
     @FXML
 
     private static final double SPEED = 5.0;
+
+    // Býr til beinan aðgang frá KeyCode og í heiltölu. Hægt að nota til að fletta upp
+    // heiltölu fyrir KeyCode
+    private static final HashMap<KeyCode, Hreyfing> map = new HashMap<KeyCode, Hreyfing>();
 
     public Leikbord getFxLeikbord () {
         return fxLeikbord;
@@ -45,6 +51,17 @@ public class SpaceController {
         time.setCycleCount(Timeline.INDEFINITE);
         time.play();
 
+    }
+
+    /**
+     * Tengir örvatakka við fall sem á að keyra í controller
+     **/
+    public void orvatakkar() {
+        map.put(KeyCode.RIGHT, Hreyfing.LEFT);
+        map.put(KeyCode.LEFT, Hreyfing.RIGHT);
+        // lambda fall - event er parameter
+       // fxStig.getScene().addEventFilter(KeyEvent.ANY,      //KeyEvents eru sendar á Scene
+         //       this::adgerdLykill); // tilvísun í aðferðina (method reference) - kallað verður á aðferðina adgerdLykill
     }
 
     public void initialize(){
