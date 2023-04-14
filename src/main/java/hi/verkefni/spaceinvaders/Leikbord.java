@@ -21,7 +21,7 @@ public class Leikbord extends AnchorPane implements LeikHluturInterface {
     }
 
     //lesari
-    public Leikbord() {FXML_Lestur.lesa(this,"leikbord.fxml");}
+    public Leikbord() {FXML_Lestur.lesa(this,"leikbord-view.fxml");}
     public static void main(String[] args) {
 
     }

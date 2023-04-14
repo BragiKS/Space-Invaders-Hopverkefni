@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import hi.verkefni.spaceinvaders.Player?>
+<?import hi.verkefni.spaceinvaders.Alien_one?>
+
+<fx:root prefHeight="400.0" prefWidth="600.0" type="javafx.scene.layout.Pane" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+    <Player fx:id="fxSpaceShip" x="10.0" y="-5.0"/>
+    <Alien_one fx:id="fxAlien_one" x="20.0" y="20.0"/>
+</fx:root>
