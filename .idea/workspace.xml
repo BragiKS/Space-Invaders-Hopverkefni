@@ -4,9 +4,55 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="16b570a9-1c09-4b25-a23a-3799b9b8333d" name="Changes" comment="">
+    <list default="true" id="a0dbeb9b-4ab3-44ff-860e-261fd64e40b9" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpaceInvaders/SpaceInvaders.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpaceInvaders/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpaceInvaders/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpaceInvaders/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpaceInvaders/src/main/java/hi/verkefni/spaceinvaders/FXML_Lestur.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpaceInvaders/src/main/java/hi/verkefni/spaceinvaders/Hreyfing.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpaceInvaders/src/main/java/hi/verkefni/spaceinvaders/LeikHluturInterface.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpaceInvaders/src/main/java/hi/verkefni/spaceinvaders/Leikbord.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpaceInvaders/src/main/java/hi/verkefni/spaceinvaders/Player.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpaceInvaders/src/main/java/hi/verkefni/spaceinvaders/SpaceApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpaceInvaders/src/main/java/hi/verkefni/spaceinvaders/SpaceController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpaceInvaders/src/main/java/module-info.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpaceInvaders/src/main/resources/hi/verkefni/spaceinvaders/img/3-bg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpaceInvaders/src/main/resources/hi/verkefni/spaceinvaders/img/4-bg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpaceInvaders/src/main/resources/hi/verkefni/spaceinvaders/img/bowbow BG.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpaceInvaders/src/main/resources/hi/verkefni/spaceinvaders/img/earth-bg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpaceInvaders/src/main/resources/hi/verkefni/spaceinvaders/img/explosion bg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpaceInvaders/src/main/resources/hi/verkefni/spaceinvaders/img/firebg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpaceInvaders/src/main/resources/hi/verkefni/spaceinvaders/img/main_shoot-bg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpaceInvaders/src/main/resources/hi/verkefni/spaceinvaders/img/moooo-bg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpaceInvaders/src/main/resources/hi/verkefni/spaceinvaders/img/player.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpaceInvaders/src/main/resources/hi/verkefni/spaceinvaders/img/shooooot.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpaceInvaders/src/main/resources/hi/verkefni/spaceinvaders/leikbord.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpaceInvaders/src/main/resources/hi/verkefni/spaceinvaders/playArea-view.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpaceInvaders/src/main/resources/hi/verkefni/spaceinvaders/player-view.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpaceInvaders/target/classes/hi/verkefni/spaceinvaders/FXML_Lestur.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpaceInvaders/target/classes/hi/verkefni/spaceinvaders/Hreyfing.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpaceInvaders/target/classes/hi/verkefni/spaceinvaders/LeikHluturInterface.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpaceInvaders/target/classes/hi/verkefni/spaceinvaders/Leikbord.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpaceInvaders/target/classes/hi/verkefni/spaceinvaders/Player.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpaceInvaders/target/classes/hi/verkefni/spaceinvaders/SpaceApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpaceInvaders/target/classes/hi/verkefni/spaceinvaders/SpaceController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpaceInvaders/target/classes/hi/verkefni/spaceinvaders/img/3-bg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpaceInvaders/target/classes/hi/verkefni/spaceinvaders/img/4-bg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpaceInvaders/target/classes/hi/verkefni/spaceinvaders/img/bowbow BG.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpaceInvaders/target/classes/hi/verkefni/spaceinvaders/img/earth-bg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpaceInvaders/target/classes/hi/verkefni/spaceinvaders/img/explosion bg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpaceInvaders/target/classes/hi/verkefni/spaceinvaders/img/firebg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpaceInvaders/target/classes/hi/verkefni/spaceinvaders/img/main_shoot-bg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpaceInvaders/target/classes/hi/verkefni/spaceinvaders/img/moooo-bg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpaceInvaders/target/classes/hi/verkefni/spaceinvaders/img/player.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpaceInvaders/target/classes/hi/verkefni/spaceinvaders/img/shooooot.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpaceInvaders/target/classes/hi/verkefni/spaceinvaders/leikbord.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpaceInvaders/target/classes/hi/verkefni/spaceinvaders/playArea-view.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpaceInvaders/target/classes/hi/verkefni/spaceinvaders/player-view.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpaceInvaders/target/classes/module-info.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,8 +63,17 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="FxmlFile" />
+        <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -30,7 +85,7 @@
       </MavenGeneralSettings>
     </option>
   </component>
-  <component name="ProjectId" id="2ON96S6S5gSOYHIGyLvl11rlOCR" />
+  <component name="ProjectId" id="2NSWk6johbyDU0rx9KaWa7B6ODX" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -38,12 +93,10 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Tölvunarfræði/HBV201G vidmotsforritun/SpaceInvaders",
+    "last_opened_file_path": "C:/Users/bragi/OneDrive/Documents/Hi/SpaceInvaders",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -52,38 +105,51 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager">
-    <configuration default="true" type="JetRunConfigurationType">
-      <module name="Space-Invaders-Hopverkefni" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <module name="Space-Invaders-Hopverkefni" />
-      <option name="filePath" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="16b570a9-1c09-4b25-a23a-3799b9b8333d" name="Changes" comment="" />
-      <created>1681389997025</created>
+      <changelist id="a0dbeb9b-4ab3-44ff-860e-261fd64e40b9" name="Changes" comment="" />
+      <created>1679658106509</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1681389997025</updated>
-      <workItem from="1681389998131" duration="3339000" />
-      <workItem from="1681393621658" duration="1084000" />
-      <workItem from="1681402996058" duration="131000" />
-      <workItem from="1681403144746" duration="81000" />
-      <workItem from="1681403241118" duration="290000" />
+      <updated>1679658106509</updated>
+      <workItem from="1679658107836" duration="1615000" />
+      <workItem from="1681472942945" duration="378000" />
+      <workItem from="1681473342542" duration="244000" />
+      <workItem from="1681473598036" duration="894000" />
+      <workItem from="1681474648886" duration="416000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/Bragi" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/.." />
+    </ignored-roots>
   </component>
 </project>
