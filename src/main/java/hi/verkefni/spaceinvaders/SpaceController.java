@@ -7,6 +7,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.media.MediaView;
 import javafx.util.Duration;
 
 import java.util.HashMap;
@@ -20,34 +21,45 @@ public class SpaceController {
     @FXML
     private ImageView fxSpaceShip;
     @FXML
+    public MediaView mediaView;
+
+    private Audio audio = new Audio();
 
     private static final double SPEED = 5.0;
 
-    public Leikbord getFxLeikbord () {
+    public Leikbord getFxLeikbord() {
         return fxLeikbord;
     }
 
     private final HashMap<KeyCode, Hreyfing> HreyfingMap = new HashMap<KeyCode, Hreyfing>();
+
+    protected void muteAudio() {
+        if (audio.getMp().isMute()) {
+            audio.getMp().setMute(false);
+        } else {
+            audio.getMp().setMute(true);
+        }
+    }
 
     public void startGame() {
         KeyFrame k = new KeyFrame(Duration.millis(10),
                 e -> {
                     fxLeikbord.afram();
                     fxLeikbord.getFxSpaceShip();
-                    //sja um stig
-                    //leikurinn.haekkaStigin();
-                    //ef skip er skotið
+                    // sja um stig
+                    // leikurinn.haekkaStigin();
+                    // ef skip er skotið
                     if (fxLeikbord.shipShoot()) {
-                        //leikLokid("Boom!");
+                        // leikLokid("Boom!");
                     }
                 });
         time = new Timeline(k);
         time.setCycleCount(Timeline.INDEFINITE);
         time.play();
-
+        audio.sfxPlayAudio();
     }
 
-    public void initialize(){
+    public void initialize() {
         fxLeikbord.setSc(this);
         playArea.addEventHandler(KeyEvent.KEY_PRESSED, event -> {
             if (event.getCode() == KeyCode.LEFT) {
