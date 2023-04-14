@@ -60,8 +60,18 @@ public class SpaceController {
         map.put(KeyCode.RIGHT, Hreyfing.LEFT);
         map.put(KeyCode.LEFT, Hreyfing.RIGHT);
         // lambda fall - event er parameter
-       // fxStig.getScene().addEventFilter(KeyEvent.ANY,      //KeyEvents eru sendar á Scene
-         //       this::adgerdLykill); // tilvísun í aðferðina (method reference) - kallað verður á aðferðina adgerdLykill
+        fxLeikbord.getScene().addEventFilter(KeyEvent.ANY,
+                event -> {
+                    try {
+                        if (event.getCode() == KeyCode.LEFT) {
+                            fxLeikbord.getFxSpaceShip().Left();
+                        } else if (event.getCode() == KeyCode.RIGHT) {
+                            fxLeikbord.getFxSpaceShip().Right();
+                        }
+                    } catch (NullPointerException e) {
+                        event.consume();        // Ef rangur lykill er sleginn inn þá höldum við áfram
+                    }
+                });
     }
 
     public void initialize(){
