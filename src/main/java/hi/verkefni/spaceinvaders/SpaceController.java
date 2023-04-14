@@ -22,7 +22,7 @@ public class SpaceController {
     @FXML
     private ImageView fxSpaceShip;
     @FXML
-
+    private ImageView fxAlien_one;
     private static final double SPEED = 5.0;
 
     // Býr til beinan aðgang frá KeyCode og í heiltölu. Hægt að nota til að fletta upp
