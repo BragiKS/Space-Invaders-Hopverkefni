@@ -27,7 +27,12 @@ public class Leikbord extends AnchorPane implements LeikHluturInterface {
     }
     @Override
     public void afram() {
-
+       /* if (fxSpaceShip.getEnemies() == null) { // bolti er ekki á neinum palli
+            fxSpaceShip.afram(); // eitt skref vinstri eða hægri en svo ...
+           // fxenemies.setStefna(.DOWN); // niður
+        } else {
+            fxBolti.aframAPalli(); // má færa bolta til vinstri eða hægri
+        }*/
     }
 
     public boolean shipShoot() {
