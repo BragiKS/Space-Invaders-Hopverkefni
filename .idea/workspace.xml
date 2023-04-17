@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     <list default="true" id="16b570a9-1c09-4b25-a23a-3799b9b8333d" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
@@ -31,6 +32,24 @@
       <change beforePath="$PROJECT_DIR$/target/classes/hi/verkefni/spaceinvaders/SpaceApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hi/verkefni/spaceinvaders/SpaceApplication.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/hi/verkefni/spaceinvaders/SpaceController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hi/verkefni/spaceinvaders/SpaceController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/hi/verkefni/spaceinvaders/leikbord-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hi/verkefni/spaceinvaders/leikbord-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/hi/verkefni/spaceinvaders/playArea-view.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/hi/verkefni/spaceinvaders/playArea.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/module-info.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/module-info.class" afterDir="false" />
+>>>>>>> Stashed changes
+=======
+    <list default="true" id="a0dbeb9b-4ab3-44ff-860e-261fd64e40b9" name="Changes" comment="Bætti við hreyfingu á enemies">
+      <change beforePath="$PROJECT_DIR$/target/classes/hi/verkefni/spaceinvaders/Alien_one.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hi/verkefni/spaceinvaders/Alien_one.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/hi/verkefni/spaceinvaders/Alien_three.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hi/verkefni/spaceinvaders/Alien_three.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/hi/verkefni/spaceinvaders/Alien_two.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hi/verkefni/spaceinvaders/Alien_two.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/hi/verkefni/spaceinvaders/FXML_Lestur.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hi/verkefni/spaceinvaders/FXML_Lestur.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/hi/verkefni/spaceinvaders/Leikbord.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hi/verkefni/spaceinvaders/Leikbord.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/hi/verkefni/spaceinvaders/Leikur.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hi/verkefni/spaceinvaders/Leikur.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/hi/verkefni/spaceinvaders/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hi/verkefni/spaceinvaders/Player.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/hi/verkefni/spaceinvaders/Shot.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hi/verkefni/spaceinvaders/Shot.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/hi/verkefni/spaceinvaders/SpaceApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hi/verkefni/spaceinvaders/SpaceApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/hi/verkefni/spaceinvaders/SpaceController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hi/verkefni/spaceinvaders/SpaceController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/hi/verkefni/spaceinvaders/View.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hi/verkefni/spaceinvaders/View.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/hi/verkefni/spaceinvaders/ViewSwitcher.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hi/verkefni/spaceinvaders/ViewSwitcher.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/hi/verkefni/spaceinvaders/playArea-view.fxml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/hi/verkefni/spaceinvaders/playArea.fxml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/module-info.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/module-info.class" afterDir="false" />

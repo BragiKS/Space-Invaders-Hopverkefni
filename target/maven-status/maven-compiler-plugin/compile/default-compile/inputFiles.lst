@@ -1,7 +1,12 @@
+<<<<<<< Updated upstream
+=======
+/Users/rikoefendi/Documents/GitHub/Space-Invaders-Hopverkefni/src/main/java/hi/verkefni/spaceinvaders/Wave_2.java
+>>>>>>> Stashed changes
 /Users/rikoefendi/Documents/GitHub/Space-Invaders-Hopverkefni/src/main/java/hi/verkefni/spaceinvaders/SpaceController.java
 /Users/rikoefendi/Documents/GitHub/Space-Invaders-Hopverkefni/src/main/java/hi/verkefni/spaceinvaders/Alien_two.java
 /Users/rikoefendi/Documents/GitHub/Space-Invaders-Hopverkefni/src/main/java/hi/verkefni/spaceinvaders/SpaceApplication.java
 /Users/rikoefendi/Documents/GitHub/Space-Invaders-Hopverkefni/src/main/java/hi/verkefni/spaceinvaders/LeikHluturInterface.java
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 /Users/rikoefendi/Documents/GitHub/Space-Invaders-Hopverkefni/src/main/java/hi/verkefni/spaceinvaders/ViewSwitcher.java
@@ -17,12 +22,24 @@
 /Users/rikoefendi/Documents/GitHub/Space-Invaders-Hopverkefni/src/main/java/hi/verkefni/spaceinvaders/Leikbord.java
 /Users/rikoefendi/Documents/GitHub/Space-Invaders-Hopverkefni/src/main/java/hi/verkefni/spaceinvaders/Alien_one.java
 /Users/rikoefendi/Documents/GitHub/Space-Invaders-Hopverkefni/src/main/java/hi/verkefni/spaceinvaders/Player.java
+=======
+/Users/rikoefendi/Documents/GitHub/Space-Invaders-Hopverkefni/src/main/java/hi/verkefni/spaceinvaders/Leikur.java
+/Users/rikoefendi/Documents/GitHub/Space-Invaders-Hopverkefni/src/main/java/hi/verkefni/spaceinvaders/ViewSwitcher.java
+/Users/rikoefendi/Documents/GitHub/Space-Invaders-Hopverkefni/src/main/java/hi/verkefni/spaceinvaders/Leikbord.java
+/Users/rikoefendi/Documents/GitHub/Space-Invaders-Hopverkefni/src/main/java/hi/verkefni/spaceinvaders/Alien_one.java
+/Users/rikoefendi/Documents/GitHub/Space-Invaders-Hopverkefni/src/main/java/hi/verkefni/spaceinvaders/Player.java
+/Users/rikoefendi/Documents/GitHub/Space-Invaders-Hopverkefni/src/main/java/hi/verkefni/spaceinvaders/Wave_1.java
+>>>>>>> Stashed changes
 /Users/rikoefendi/Documents/GitHub/Space-Invaders-Hopverkefni/src/main/java/module-info.java
 /Users/rikoefendi/Documents/GitHub/Space-Invaders-Hopverkefni/src/main/java/hi/verkefni/spaceinvaders/Alien_three.java
 /Users/rikoefendi/Documents/GitHub/Space-Invaders-Hopverkefni/src/main/java/hi/verkefni/spaceinvaders/View.java
 /Users/rikoefendi/Documents/GitHub/Space-Invaders-Hopverkefni/src/main/java/hi/verkefni/spaceinvaders/FXML_Lestur.java
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+=======
+/Users/rikoefendi/Documents/GitHub/Space-Invaders-Hopverkefni/src/main/java/hi/verkefni/spaceinvaders/Shot.java
+>>>>>>> Stashed changes
 =======
 /Users/rikoefendi/Documents/GitHub/Space-Invaders-Hopverkefni/src/main/java/hi/verkefni/spaceinvaders/Shot.java
 >>>>>>> Stashed changes
