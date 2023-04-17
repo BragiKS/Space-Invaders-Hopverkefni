@@ -18,8 +18,6 @@ public class SpaceController {
     @FXML
     private Leikbord fxLeikbord;
     @FXML
-    protected AnchorPane playArea;
-    @FXML
     private ImageView fxSpaceShip;
     @FXML
     private ImageView fxAlien_one;
@@ -73,13 +71,14 @@ public class SpaceController {
 
     public void initialize(){
         fxLeikbord.setSc(this);
-        playArea.addEventHandler(KeyEvent.KEY_PRESSED, event -> {
+        new Wave_1(fxLeikbord);
+        /*playArea.addEventHandler(KeyEvent.KEY_PRESSED, event -> {
             if (event.getCode() == KeyCode.LEFT) {
                 fxSpaceShip.setX(fxSpaceShip.getX() - SPEED);
             } else if (event.getCode() == KeyCode.RIGHT) {
                 fxSpaceShip.setX(fxSpaceShip.getX() + SPEED);
             }
-        });
+        });*/
     }
 
 }
