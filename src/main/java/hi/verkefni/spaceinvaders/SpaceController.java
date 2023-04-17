@@ -25,12 +25,12 @@ public class SpaceController {
     private ImageView fxAlien_one;
     private static final double SPEED = 5.0;
 
+    // Býr til beinan aðgang frá KeyCode og í heiltölu. Hægt að nota til að fletta upp
+    // heiltölu fyrir KeyCode
 
     public Leikbord getFxLeikbord () {
         return fxLeikbord;
     }
-
-
 
     public void startGame() {
         KeyFrame k = new KeyFrame(Duration.millis(10),
@@ -54,7 +54,6 @@ public class SpaceController {
      * Tengir örvatakka við fall sem á að keyra í controller
      **/
     public void orvatakkar() {
-
         // lambda fall - event er parameter
         fxLeikbord.getScene().addEventFilter(KeyEvent.ANY,
                 event -> {
@@ -63,6 +62,8 @@ public class SpaceController {
                             fxLeikbord.getFxSpaceShip().Left();
                         } else if (event.getCode() == KeyCode.RIGHT) {
                             fxLeikbord.getFxSpaceShip().Right();
+                        } else if (event.getCode() == KeyCode.SPACE) {
+                            fxLeikbord.getFxSpaceShip().Shoot();
                         }
                     } catch (NullPointerException e) {
                         event.consume();        // Ef rangur lykill er sleginn inn þá höldum við áfram
