@@ -4,6 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
+<<<<<<< Updated upstream
     <list default="true" id="16b570a9-1c09-4b25-a23a-3799b9b8333d" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
 <<<<<<< Updated upstream
@@ -12,6 +13,34 @@
       <change beforePath="$PROJECT_DIR$/src/main/java/hi/verkefni/spaceinvaders/SpaceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hi/verkefni/spaceinvaders/SpaceApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/hi/verkefni/spaceinvaders/SpaceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hi/verkefni/spaceinvaders/SpaceController.java" afterDir="false" />
 =======
+>>>>>>> Stashed changes
+=======
+    <list default="true" id="a0dbeb9b-4ab3-44ff-860e-261fd64e40b9" name="Changes" comment="bætti við player hreyfingu">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hi/verkefni/spaceinvaders/Leikbord.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hi/verkefni/spaceinvaders/Leikbord.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hi/verkefni/spaceinvaders/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hi/verkefni/spaceinvaders/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hi/verkefni/spaceinvaders/Shot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hi/verkefni/spaceinvaders/Shot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hi/verkefni/spaceinvaders/SpaceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hi/verkefni/spaceinvaders/SpaceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hi/verkefni/spaceinvaders/SpaceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hi/verkefni/spaceinvaders/SpaceController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/hi/verkefni/spaceinvaders/img/3-bg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/hi/verkefni/spaceinvaders/img/4-bg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/hi/verkefni/spaceinvaders/img/bowbow BG.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/hi/verkefni/spaceinvaders/img/earth-bg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/hi/verkefni/spaceinvaders/img/explosion bg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/hi/verkefni/spaceinvaders/img/firebg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/hi/verkefni/spaceinvaders/img/main_shoot-bg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/hi/verkefni/spaceinvaders/img/moooo-bg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/hi/verkefni/spaceinvaders/img/shooooot.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/hi/verkefni/spaceinvaders/shot-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hi/verkefni/spaceinvaders/shot-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/hi/verkefni/spaceinvaders/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hi/verkefni/spaceinvaders/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/hi/verkefni/spaceinvaders/Leikbord.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hi/verkefni/spaceinvaders/Leikbord.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/hi/verkefni/spaceinvaders/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hi/verkefni/spaceinvaders/Player.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/hi/verkefni/spaceinvaders/Shot.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hi/verkefni/spaceinvaders/Shot.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/hi/verkefni/spaceinvaders/SpaceApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hi/verkefni/spaceinvaders/SpaceApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/hi/verkefni/spaceinvaders/SpaceController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hi/verkefni/spaceinvaders/SpaceController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/hi/verkefni/spaceinvaders/img/moooo-bg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/hi/verkefni/spaceinvaders/shot-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hi/verkefni/spaceinvaders/shot-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/hi/verkefni/spaceinvaders/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hi/verkefni/spaceinvaders/styles.css" afterDir="false" />
 >>>>>>> Stashed changes
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -24,10 +53,41 @@
       <list>
         <option value="FxmlFile" />
         <option value="Class" />
+<<<<<<< Updated upstream
         <option value="Enum" />
       </list>
     </option>
   </component>
+=======
+        <option value="CSS File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Merge.Settings">
+    <option name="BRANCH" value="main" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="3a088ee3-8ae6-48de-9ea5-fa1470f0b613" />
+        <option name="url" value="https://github.com/BragiKS/Space-Invaders-Hopverkefni.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
+>>>>>>> Stashed changes
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -60,6 +120,7 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+<<<<<<< Updated upstream
   <component name="RunManager">
     <configuration default="true" type="JetRunConfigurationType">
       <module name="Space-Invaders-Hopverkefni" />
@@ -74,6 +135,14 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+=======
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Tölvunarfræði\HBV201G vidmotsforritun\SpaceInvaders\src\main\resources\hi\verkefni\spaceinvaders\img" />
+      <recent name="C:\Tölvunarfræði\HBV201G vidmotsforritun\SpaceInvaders\src\main\resources\hi\verkefni\img\spaceinvaders" />
+      <recent name="C:\Tölvunarfræði\HBV201G vidmotsforritun\SpaceInvaders\src\main\resources\hi\verkefni\spaceinvaders" />
+    </key>
+>>>>>>> Stashed changes
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">

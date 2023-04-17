@@ -25,11 +25,17 @@ public class SpaceApplication extends Application {
         //sc.start();
         stage.setTitle("Space invaders");
         stage.setScene(s);
+
         stage.show();
 
 
         sc.orvatakkar();
+
         sc.startGame();
+
+
+
+
     }
 
     public static void main(String[] args) {

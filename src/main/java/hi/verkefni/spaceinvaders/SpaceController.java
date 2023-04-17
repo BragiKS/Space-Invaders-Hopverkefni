@@ -22,7 +22,13 @@ public class SpaceController {
     @FXML
     private ImageView fxSpaceShip;
     @FXML
+<<<<<<< Updated upstream
 
+=======
+    private ImageView fxAlien_one;
+    @FXML
+    private ImageView fxShot;
+>>>>>>> Stashed changes
     private static final double SPEED = 5.0;
 
     // Býr til beinan aðgang frá KeyCode og í heiltölu. Hægt að nota til að fletta upp
@@ -60,19 +66,31 @@ public class SpaceController {
         map.put(KeyCode.RIGHT, Hreyfing.LEFT);
         map.put(KeyCode.LEFT, Hreyfing.RIGHT);
         // lambda fall - event er parameter
+<<<<<<< Updated upstream
        // fxStig.getScene().addEventFilter(KeyEvent.ANY,      //KeyEvents eru sendar á Scene
          //       this::adgerdLykill); // tilvísun í aðferðina (method reference) - kallað verður á aðferðina adgerdLykill
+=======
+        fxLeikbord.getScene().addEventFilter(KeyEvent.ANY,
+                event -> {
+                    try {
+                        if (event.getCode() == KeyCode.LEFT) {
+                            fxLeikbord.getFxSpaceShip().Left();
+                        } else if (event.getCode() == KeyCode.RIGHT) {
+                            fxLeikbord.getFxSpaceShip().Right();
+                        } else if (event.getCode() == KeyCode.SPACE) {
+                            System.out.println("YOOO bag alerttt");
+                            fxLeikbord.getFxSpaceShip().Shoot(fxLeikbord);
+                        }
+                    } catch (NullPointerException e) {
+                        event.consume();        // Ef rangur lykill er sleginn inn þá höldum við áfram
+                    }
+                });
+>>>>>>> Stashed changes
     }
 
     public void initialize(){
         fxLeikbord.setSc(this);
-        playArea.addEventHandler(KeyEvent.KEY_PRESSED, event -> {
-            if (event.getCode() == KeyCode.LEFT) {
-                fxSpaceShip.setX(fxSpaceShip.getX() - SPEED);
-            } else if (event.getCode() == KeyCode.RIGHT) {
-                fxSpaceShip.setX(fxSpaceShip.getX() + SPEED);
-            }
-        });
+
     }
 
 }
