@@ -1,12 +1,15 @@
 package hi.verkefni.spaceinvaders;
 
 
+import javafx.animation.KeyFrame;
+import javafx.animation.Timeline;
 import javafx.collections.FXCollections;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.geometry.Bounds;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.util.Duration;
 
 public class Player extends ImageView {
     @FXML
@@ -48,7 +51,29 @@ public class Player extends ImageView {
             setX(getX() + SPEED);
         }
     }
-    public void Shoot() {
-        new Shot(getX(), getY());
+    public void Shoot(Leikbord leikbordi) {
+
+        Shot bullet = new Shot();
+
+        bullet.setTranslateX(getX()+52);
+        bullet.setTranslateY(getY()-10);
+
+
+        leikbordi.getChildren().add(bullet);
+
+        Timeline bulletTimeline = new Timeline(new KeyFrame(Duration.seconds(0.0250), e -> {
+            bullet.setTranslateY(bullet.getTranslateY() - 5);
+
+            if (bullet.getTranslateY() < 0) {
+                leikbordi.getChildren().remove(bullet);
+            }
+        }));
+
+        bulletTimeline.setCycleCount(Timeline.INDEFINITE);
+        bulletTimeline.play();
+
+
+
+
     }
 }

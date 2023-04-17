@@ -57,7 +57,8 @@ public class SpaceController {
                         } else if (event.getCode() == KeyCode.RIGHT) {
                             fxLeikbord.getFxSpaceShip().Right();
                         } else if (event.getCode() == KeyCode.SPACE) {
-                            fxLeikbord.getFxSpaceShip().Shoot();
+                            System.out.println("YOOO bag alerttt");
+                            fxLeikbord.getFxSpaceShip().Shoot(fxLeikbord);
                         }
                     } catch (NullPointerException e) {
                         event.consume();        // Ef rangur lykill er sleginn inn þá höldum við áfram
