@@ -22,11 +22,22 @@ public class SpaceController {
     private double shootCooldown = 0.5; // Cooldown duration in seconds
     private static final double SPEED = 5.0;
 
+    private Audio audio = new Audio();
+
     // Býr til beinan aðgang frá KeyCode og í heiltölu. Hægt að nota til að fletta upp
     // heiltölu fyrir KeyCode
 
     public Leikbord getFxLeikbord () {
         return fxLeikbord;
+    }
+
+    @FXML
+    protected void muteAudio() {
+        if (audio.getMp().isMute()) {
+            audio.getMp().setMute(false);
+        } else {
+            audio.getMp().setMute(true);
+        }
     }
 
     public void startGame() {
@@ -39,13 +50,16 @@ public class SpaceController {
                     //ef skip er skotið
                     if (fxLeikbord.shipShoot()) {
                         //leikLokid("Boom!");
+                        //audio.gameOverAudio();
                     }
                 });
         time = new Timeline(k);
         time.setCycleCount(Timeline.INDEFINITE);
         time.play();
-
+        audio.sfxPlayAudio();
     }
+
+
 
     /**
      * Tengir örvatakka við fall sem á að keyra í controller

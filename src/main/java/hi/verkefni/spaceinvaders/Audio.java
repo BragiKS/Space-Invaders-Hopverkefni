@@ -31,7 +31,7 @@ public class Audio {
 
     public void sfxPlayAudio() {
         try {
-            String path = "src/main/resources/hi/verkefni/spaceinvaders/Audio/";
+            String path = "src/main/resources/hi/verkefni/spaceinvaders/Audio/Space-invaders theme song.mp3";
             URI uri = new File(path).toURI();
             Media media = new Media(uri.toString());
             mp = new MediaPlayer(media);
