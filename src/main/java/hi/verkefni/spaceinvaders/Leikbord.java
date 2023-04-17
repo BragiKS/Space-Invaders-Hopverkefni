@@ -39,4 +39,14 @@ public class Leikbord extends AnchorPane implements LeikHluturInterface {
         //ef líf klárast
         return true;
     }
+
+    public void nyrLeikur() {
+        getChildren().clear();
+
+        upphafsstilla();    // upphafsstilla eins og í byrjun
+    }
+
+    private void upphafsstilla() {
+        //
+    }
 }
