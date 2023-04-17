@@ -11,7 +11,4 @@
         <URL value="@styles.css"/>
     </stylesheets>
     <Player fx:id="fxSpaceShip" x="10.0" y="550"/>
-    <Alien_one fx:id="fxAlien_one" x="20.0" y="20.0"/>
-    <Alien_two fx:id="fxAlien_two" x="400" y="200"/>
-    <Alien_three fx:id="fxAlien_three" x="100" y="200"/>
 </fx:root>
