@@ -17,10 +17,6 @@ public class SpaceController {
     private Timeline time;
     @FXML
     private Leikbord fxLeikbord;
-    @FXML
-    private ImageView fxSpaceShip;
-    @FXML
-    private ImageView fxAlien_one;
     private static final double SPEED = 5.0;
 
     // Býr til beinan aðgang frá KeyCode og í heiltölu. Hægt að nota til að fletta upp
@@ -71,7 +67,7 @@ public class SpaceController {
 
     public void initialize(){
         fxLeikbord.setSc(this);
-        new Wave_1(fxLeikbord);
+        new Wave_2(fxLeikbord);
         /*playArea.addEventHandler(KeyEvent.KEY_PRESSED, event -> {
             if (event.getCode() == KeyCode.LEFT) {
                 fxSpaceShip.setX(fxSpaceShip.getX() - SPEED);

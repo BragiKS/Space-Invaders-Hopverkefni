@@ -3,12 +3,10 @@ package hi.verkefni.spaceinvaders;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
 import javafx.animation.TranslateTransition;
-import javafx.fxml.FXML;
 import javafx.util.Duration;
 
-public class Wave_1 {
-    public Wave_1(Leikbord leikbord) {
-
+public class Wave_2 {
+    public Wave_2(Leikbord leikbord) {
         Alien_one alien1 = new Alien_one();
         alien1.setTranslateX(100);
         Alien_one alien2 = new Alien_one();
@@ -17,27 +15,23 @@ public class Wave_1 {
         alien3.setTranslateX(300);
         Alien_one alien4 = new Alien_one();
         alien4.setTranslateX(400);
-        Alien_one alien5 = new Alien_one();
-        alien5.setTranslateX(100);
-        alien5.setTranslateY(-100);
-        Alien_one alien6 = new Alien_one();
-        alien6.setTranslateX(200);
-        alien6.setTranslateY(-100);
-        Alien_one alien7 = new Alien_one();
-        alien7.setTranslateX(300);
-        alien7.setTranslateY(-100);
-        Alien_one alien8 = new Alien_one();
-        alien8.setTranslateX(400);
-        alien8.setTranslateY(-100);
+        Alien_two shooter1 = new Alien_two();
+        shooter1.setTranslateX(150);
+        shooter1.setTranslateY(-100);
+        Alien_two shooter2 = new Alien_two();
+        shooter2.setTranslateX(250);
+        shooter2.setTranslateY(-100);
+        Alien_two shooter3 = new Alien_two();
+        shooter3.setTranslateX(350);
+        shooter3.setTranslateY(-100);
 
         leikbord.getChildren().add(alien1);
         leikbord.getChildren().add(alien2);
         leikbord.getChildren().add(alien3);
         leikbord.getChildren().add(alien4);
-        leikbord.getChildren().add(alien5);
-        leikbord.getChildren().add(alien6);
-        leikbord.getChildren().add(alien7);
-        leikbord.getChildren().add(alien8);
+        leikbord.getChildren().add(shooter1);
+        leikbord.getChildren().add(shooter2);
+        leikbord.getChildren().add(shooter3);
 
         Timeline alienTimeline = new Timeline(new KeyFrame(Duration.millis(160), e -> {
             if (alien1.getTranslateY() < 200) {
@@ -45,10 +39,9 @@ public class Wave_1 {
                 alien2.setTranslateY(alien2.getTranslateY() + 5);
                 alien3.setTranslateY(alien3.getTranslateY() + 5);
                 alien4.setTranslateY(alien4.getTranslateY() + 5);
-                alien5.setTranslateY(alien5.getTranslateY() + 5);
-                alien6.setTranslateY(alien6.getTranslateY() + 5);
-                alien7.setTranslateY(alien7.getTranslateY() + 5);
-                alien8.setTranslateY(alien8.getTranslateY() + 5);
+                shooter1.setTranslateY(shooter1.getTranslateY() + 5);
+                shooter2.setTranslateY(shooter2.getTranslateY() + 5);
+                shooter3.setTranslateY(shooter3.getTranslateY() + 5);
 
             }
         }));
@@ -79,29 +72,22 @@ public class Wave_1 {
         translateTransition4.setByX(80);
         translateTransition4.play();
 
-        TranslateTransition translateTransition5 = new TranslateTransition(Duration.seconds(5), alien5);
+        TranslateTransition translateTransition5 = new TranslateTransition(Duration.seconds(5), shooter1);
         translateTransition5.setAutoReverse(true);
         translateTransition5.setCycleCount(TranslateTransition.INDEFINITE);
         translateTransition5.setByX(80);
         translateTransition5.play();
 
-        TranslateTransition translateTransition6 = new TranslateTransition(Duration.seconds(5), alien6);
+        TranslateTransition translateTransition6 = new TranslateTransition(Duration.seconds(5), shooter2);
         translateTransition6.setAutoReverse(true);
         translateTransition6.setCycleCount(TranslateTransition.INDEFINITE);
         translateTransition6.setByX(80);
         translateTransition6.play();
 
-        TranslateTransition translateTransition7 = new TranslateTransition(Duration.seconds(5), alien7);
+        TranslateTransition translateTransition7 = new TranslateTransition(Duration.seconds(5), shooter3);
         translateTransition7.setAutoReverse(true);
         translateTransition7.setCycleCount(TranslateTransition.INDEFINITE);
         translateTransition7.setByX(80);
         translateTransition7.play();
-
-        TranslateTransition translateTransition8 = new TranslateTransition(Duration.seconds(5), alien8);
-        translateTransition8.setAutoReverse(true);
-        translateTransition8.setCycleCount(TranslateTransition.INDEFINITE);
-        translateTransition8.setByX(80);
-        translateTransition8.play();
-
     }
 }
