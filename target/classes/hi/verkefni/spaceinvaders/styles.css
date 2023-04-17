@@ -1,9 +1,6 @@
-
-#playArea {
+#fxLeikbord {
     -fx-background-image: url("Space.png");
 
     -fx-background-size: 170% auto;
     -fx-background-repeat: no-repeat;
 }
-
-

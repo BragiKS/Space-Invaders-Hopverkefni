@@ -16,7 +16,7 @@ public class SpaceApplication extends Application {
 
     @Override
     public void start(Stage stage) throws IOException {
-       // FXMLLoader fxmlLoader = new FXMLLoader(SpaceApplication.class.getResource("playArea-view.fxml"));
+       // FXMLLoader fxmlLoader = new FXMLLoader(SpaceApplication.class.getResource("space-view.fxml"));
         Scene s = new Scene(new Pane());
         ViewSwitcher.setScene(s);
         ViewSwitcher.switchTo(View.SHOOTING);
@@ -27,7 +27,7 @@ public class SpaceApplication extends Application {
         stage.setScene(s);
 
         stage.show();
-
+        stage.setResizable(false);
 
         sc.orvatakkar();
 

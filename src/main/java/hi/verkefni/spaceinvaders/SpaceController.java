@@ -17,29 +17,14 @@ public class SpaceController {
     private Timeline time;
     @FXML
     private Leikbord fxLeikbord;
-    @FXML
-    protected AnchorPane playArea;
-    @FXML
-    private ImageView fxSpaceShip;
-    @FXML
-<<<<<<< Updated upstream
-
-=======
-    private ImageView fxAlien_one;
-    @FXML
-    private ImageView fxShot;
->>>>>>> Stashed changes
     private static final double SPEED = 5.0;
 
     // Býr til beinan aðgang frá KeyCode og í heiltölu. Hægt að nota til að fletta upp
     // heiltölu fyrir KeyCode
-    private static final HashMap<KeyCode, Hreyfing> map = new HashMap<KeyCode, Hreyfing>();
 
     public Leikbord getFxLeikbord () {
         return fxLeikbord;
     }
-
-    private final HashMap<KeyCode, Hreyfing> HreyfingMap = new HashMap<KeyCode, Hreyfing>();
 
     public void startGame() {
         KeyFrame k = new KeyFrame(Duration.millis(10),
@@ -63,13 +48,7 @@ public class SpaceController {
      * Tengir örvatakka við fall sem á að keyra í controller
      **/
     public void orvatakkar() {
-        map.put(KeyCode.RIGHT, Hreyfing.LEFT);
-        map.put(KeyCode.LEFT, Hreyfing.RIGHT);
         // lambda fall - event er parameter
-<<<<<<< Updated upstream
-       // fxStig.getScene().addEventFilter(KeyEvent.ANY,      //KeyEvents eru sendar á Scene
-         //       this::adgerdLykill); // tilvísun í aðferðina (method reference) - kallað verður á aðferðina adgerdLykill
-=======
         fxLeikbord.getScene().addEventFilter(KeyEvent.ANY,
                 event -> {
                     try {
@@ -78,19 +57,24 @@ public class SpaceController {
                         } else if (event.getCode() == KeyCode.RIGHT) {
                             fxLeikbord.getFxSpaceShip().Right();
                         } else if (event.getCode() == KeyCode.SPACE) {
-                            System.out.println("YOOO bag alerttt");
-                            fxLeikbord.getFxSpaceShip().Shoot(fxLeikbord);
+                            fxLeikbord.getFxSpaceShip().Shoot();
                         }
                     } catch (NullPointerException e) {
                         event.consume();        // Ef rangur lykill er sleginn inn þá höldum við áfram
                     }
                 });
->>>>>>> Stashed changes
     }
 
     public void initialize(){
         fxLeikbord.setSc(this);
-
+        new Wave_2(fxLeikbord);
+        /*playArea.addEventHandler(KeyEvent.KEY_PRESSED, event -> {
+            if (event.getCode() == KeyCode.LEFT) {
+                fxSpaceShip.setX(fxSpaceShip.getX() - SPEED);
+            } else if (event.getCode() == KeyCode.RIGHT) {
+                fxSpaceShip.setX(fxSpaceShip.getX() + SPEED);
+            }
+        });*/
     }
 
 }
