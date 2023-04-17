@@ -1,7 +1,9 @@
 package hi.verkefni.spaceinvaders;
 
 
+import javafx.collections.FXCollections;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.geometry.Bounds;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -9,6 +11,10 @@ import javafx.scene.image.ImageView;
 public class Player extends ImageView {
     @FXML
     private Player fxSpaceShip;
+    @FXML
+    private Leikbord fxLeikbord;
+    @FXML
+    private Shot fxShot;
 
     public Player() {
         FXML_Lestur.lesa(this, "player-view.fxml");
@@ -38,8 +44,11 @@ public class Player extends ImageView {
     public void Right() {
         Leikbord parent = (Leikbord) this.getParent();
         Bounds l = parent.getBoundsInParent();
-        if (parent.getWidth() > getX()) {
+        if (400 > getX()) {
             setX(getX() + SPEED);
         }
+    }
+    public void Shoot() {
+        new Shot(getX(), getY());
     }
 }

@@ -27,13 +27,10 @@ public class SpaceController {
 
     // Býr til beinan aðgang frá KeyCode og í heiltölu. Hægt að nota til að fletta upp
     // heiltölu fyrir KeyCode
-    private static final HashMap<KeyCode, Hreyfing> map = new HashMap<KeyCode, Hreyfing>();
 
     public Leikbord getFxLeikbord () {
         return fxLeikbord;
     }
-
-    private final HashMap<KeyCode, Hreyfing> HreyfingMap = new HashMap<KeyCode, Hreyfing>();
 
     public void startGame() {
         KeyFrame k = new KeyFrame(Duration.millis(10),
@@ -57,8 +54,6 @@ public class SpaceController {
      * Tengir örvatakka við fall sem á að keyra í controller
      **/
     public void orvatakkar() {
-        map.put(KeyCode.RIGHT, Hreyfing.LEFT);
-        map.put(KeyCode.LEFT, Hreyfing.RIGHT);
         // lambda fall - event er parameter
         fxLeikbord.getScene().addEventFilter(KeyEvent.ANY,
                 event -> {
@@ -67,6 +62,8 @@ public class SpaceController {
                             fxLeikbord.getFxSpaceShip().Left();
                         } else if (event.getCode() == KeyCode.RIGHT) {
                             fxLeikbord.getFxSpaceShip().Right();
+                        } else if (event.getCode() == KeyCode.SPACE) {
+                            fxLeikbord.getFxSpaceShip().Shoot();
                         }
                     } catch (NullPointerException e) {
                         event.consume();        // Ef rangur lykill er sleginn inn þá höldum við áfram
