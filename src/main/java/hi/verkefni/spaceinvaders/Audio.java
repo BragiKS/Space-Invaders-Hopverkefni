@@ -31,22 +31,22 @@ public class Audio {
         try {
             String path = "/theme.mp3";
             Media audioFile = new Media(getClass().getResource(path).toExternalForm());
-            MediaPlayer mediaPlayer = new MediaPlayer(audioFile);
-            mediaPlayer.setCycleCount(MediaPlayer.INDEFINITE); // Set cycle count to repeat indefinitely
-            mediaPlayer.play();
+            mp = new MediaPlayer(audioFile); // Assign the mediaPlayer object to the instance variable mp
+            mp.setCycleCount(MediaPlayer.INDEFINITE); // Set cycle count to repeat indefinitely
+            mp.play();
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
+
     public void gameOverAudio() {
         try {
-            String path = "/game-over.wav";
-            URI uri = new File(path).toURI();
-            Media media = new Media(uri.toString());
-            mp = new MediaPlayer(media);
-            getSC().mediaView.setMediaPlayer(mp);
-            mp.play();
+            String path = "/game-over.mp3";
+            Media audioFile = new Media(getClass().getResource(path).toExternalForm());
+            MediaPlayer mediaPlayer = new MediaPlayer(audioFile);
+            mediaPlayer.setCycleCount(MediaPlayer.INDEFINITE); // Set cycle count to repeat indefinitely
+            mediaPlayer.play();
         } catch (Exception e) {
             e.printStackTrace();
         }
