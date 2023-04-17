@@ -1,6 +1,7 @@
 package hi.verkefni.spaceinvaders;
 
 import javafx.animation.KeyFrame;
+import javafx.animation.PauseTransition;
 import javafx.animation.Timeline;
 import javafx.fxml.FXML;
 import javafx.scene.image.ImageView;
@@ -17,6 +18,8 @@ public class SpaceController {
     private Timeline time;
     @FXML
     private Leikbord fxLeikbord;
+    private boolean canShoot = true;
+    private double shootCooldown = 0.5; // Cooldown duration in seconds
     private static final double SPEED = 5.0;
 
     // Býr til beinan aðgang frá KeyCode og í heiltölu. Hægt að nota til að fletta upp
@@ -57,8 +60,16 @@ public class SpaceController {
                         } else if (event.getCode() == KeyCode.RIGHT) {
                             fxLeikbord.getFxSpaceShip().Right();
                         } else if (event.getCode() == KeyCode.SPACE) {
-                            System.out.println("YOOO bag alerttt");
-                            fxLeikbord.getFxSpaceShip().Shoot(fxLeikbord);
+                            if (canShoot) {
+                                System.out.println("YOOO bag alerttt");
+                                fxLeikbord.getFxSpaceShip().Shoot(fxLeikbord);
+                                canShoot = false;
+
+                                // Start cooldown timer
+                                PauseTransition cooldownTimer = new PauseTransition(Duration.seconds(shootCooldown));
+                                cooldownTimer.setOnFinished(e -> canShoot = true);
+                                cooldownTimer.play();
+                            }
                         }
                     } catch (NullPointerException e) {
                         event.consume();        // Ef rangur lykill er sleginn inn þá höldum við áfram
