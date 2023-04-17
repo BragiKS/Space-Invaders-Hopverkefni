@@ -5,8 +5,12 @@
 
 <?import hi.verkefni.spaceinvaders.Alien_two?>
 <?import hi.verkefni.spaceinvaders.Alien_three?>
-<fx:root prefHeight="400.0" prefWidth="600.0" type="javafx.scene.layout.Pane" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
-    <Player fx:id="fxSpaceShip" x="10.0" y="-5.0"/>
+<?import java.net.URL?>
+<fx:root fx:id="playArea" prefHeight="400.0" prefWidth="600.0" type="javafx.scene.layout.Pane" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+    <stylesheets>
+        <URL value="@styles.css"/>
+    </stylesheets>
+    <Player fx:id="fxSpaceShip" x="10.0" y="550"/>
     <Alien_one fx:id="fxAlien_one" x="20.0" y="20.0"/>
     <Alien_two fx:id="fxAlien_two" x="400" y="200"/>
     <Alien_three fx:id="fxAlien_three" x="100" y="200"/>

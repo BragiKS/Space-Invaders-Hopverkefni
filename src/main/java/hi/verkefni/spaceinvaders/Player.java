@@ -38,7 +38,7 @@ public class Player extends ImageView {
     public void Right() {
         Leikbord parent = (Leikbord) this.getParent();
         Bounds l = parent.getBoundsInParent();
-        if (parent.getWidth() > getX()) {
+        if (400 > getX()) {
             setX(getX() + SPEED);
         }
     }
