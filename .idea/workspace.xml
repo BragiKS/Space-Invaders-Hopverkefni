@@ -5,12 +5,32 @@
   </component>
   <component name="ChangeListManager">
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     <list default="true" id="16b570a9-1c09-4b25-a23a-3799b9b8333d" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
 =======
     <list default="true" id="a0dbeb9b-4ab3-44ff-860e-261fd64e40b9" name="Changes" comment="bætti við alien 2 og 3">
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/hi/verkefni/spaceinvaders/playArea-view.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/hi/verkefni/spaceinvaders/playArea.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/module-info.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/module-info.class" afterDir="false" />
+>>>>>>> Stashed changes
+=======
+    <list default="true" id="a0dbeb9b-4ab3-44ff-860e-261fd64e40b9" name="Changes" comment="bætti við player hreyfingu">
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_base_win_19.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_base_mac_19.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_controls_win_19.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_controls_mac_19.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_fxml_win_19.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_fxml_mac_19.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_graphics_win_19.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_graphics_mac_19.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpaceInvaders.iml" beforeDir="false" afterPath="$PROJECT_DIR$/SpaceInvaders.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hi/verkefni/spaceinvaders/SpaceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hi/verkefni/spaceinvaders/SpaceController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/hi/verkefni/spaceinvaders/leikbord-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hi/verkefni/spaceinvaders/leikbord-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/hi/verkefni/spaceinvaders/Leikbord.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hi/verkefni/spaceinvaders/Leikbord.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/hi/verkefni/spaceinvaders/SpaceApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hi/verkefni/spaceinvaders/SpaceApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/hi/verkefni/spaceinvaders/SpaceController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hi/verkefni/spaceinvaders/SpaceController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/hi/verkefni/spaceinvaders/leikbord-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hi/verkefni/spaceinvaders/leikbord-view.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/hi/verkefni/spaceinvaders/playArea-view.fxml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/hi/verkefni/spaceinvaders/playArea.fxml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/module-info.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/module-info.class" afterDir="false" />
@@ -28,6 +48,33 @@
       </list>
     </option>
   </component>
+<<<<<<< Updated upstream
+=======
+  <component name="Git.Merge.Settings">
+    <option name="BRANCH" value="main" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="3a088ee3-8ae6-48de-9ea5-fa1470f0b613" />
+        <option name="url" value="https://github.com/BragiKS/Space-Invaders-Hopverkefni.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
+>>>>>>> Stashed changes
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -45,6 +92,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "ASKED_ADD_EXTERNAL_FILES": "true",
@@ -53,12 +101,23 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "last_opened_file_path": "C:/Tölvunarfræði/HBV201G vidmotsforritun/SpaceInvaders",
+=======
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/Users/rikoefendi/Documents/GitHub/Space-Invaders-Hopverkefni",
+    "list.type.of.created.stylesheet": "CSS",
+>>>>>>> Stashed changes
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
     "vue.rearranger.settings.migration": "true"
+<<<<<<< Updated upstream
   }
 }]]></component>
   <component name="RunManager">
@@ -89,8 +148,10 @@
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+=======
+>>>>>>> Stashed changes
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Tölvunarfræði\HBV201G vidmotsforritun\SpaceInvaders\src\main\resources\hi\verkefni\spaceinvaders" />

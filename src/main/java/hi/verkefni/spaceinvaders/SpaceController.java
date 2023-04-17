@@ -3,6 +3,7 @@ package hi.verkefni.spaceinvaders;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
 import javafx.fxml.FXML;
+import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
@@ -20,6 +21,8 @@ public class SpaceController {
     private Label fxStig;
     @FXML
     protected AnchorPane playArea;
+    @FXML
+    private Label fxStig;
     @FXML
     private ImageView fxSpaceShip;
     @FXML
