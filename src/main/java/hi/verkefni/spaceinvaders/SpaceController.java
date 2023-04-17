@@ -17,6 +17,8 @@ public class SpaceController {
     @FXML
     private Leikbord fxLeikbord;
     @FXML
+    private Label fxStig;
+    @FXML
     protected AnchorPane playArea;
     @FXML
     private ImageView fxSpaceShip;
