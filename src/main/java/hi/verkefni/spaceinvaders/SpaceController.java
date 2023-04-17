@@ -4,13 +4,14 @@ import javafx.animation.KeyFrame;
 import javafx.animation.PauseTransition;
 import javafx.animation.Timeline;
 import javafx.fxml.FXML;
+import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.media.MediaView;
 import javafx.util.Duration;
-
+import hi.verkefni.spaceinvaders.Leikur;
 import java.util.HashMap;
 
 public class SpaceController {
@@ -21,12 +22,17 @@ public class SpaceController {
     private Audio audio = new Audio();
     @FXML
     private Leikbord fxLeikbord;
+
+    @FXML
+    private Label fxStig;
     private boolean canShoot = true;
     private double shootCooldown = 0.5; // Cooldown duration in seconds
     private static final double SPEED = 5.0;
 
-    // Býr til beinan aðgang frá KeyCode og í heiltölu. Hægt að nota til að fletta upp
-    // heiltölu fyrir KeyCode
+    private Timeline t; // tímalínan
+    Leikur leikur;
+
+
 
     public Leikbord getFxLeikbord () {
         return fxLeikbord;
@@ -37,6 +43,7 @@ public class SpaceController {
                 e -> {
                     fxLeikbord.afram();
                     fxLeikbord.getFxSpaceShip();
+                    leikur.haekkaStigin();
                     //sja um stig
                     //leikurinn.haekkaStigin();
                     //ef skip er skotið
@@ -81,9 +88,20 @@ public class SpaceController {
                 });
     }
 
+    /**
+     * Stillir upp nýjum leik og byrjar hann
+     */
+    public void nyrLeikur() {
+        leikur.nyrLeikur();
+        fxLeikbord.nyrLeikur();
+        t.play();
+    }
+
     public void initialize(){
         fxLeikbord.setSc(this);
         new Wave_2(fxLeikbord);
+
+
         /*playArea.addEventHandler(KeyEvent.KEY_PRESSED, event -> {
             if (event.getCode() == KeyCode.LEFT) {
                 fxSpaceShip.setX(fxSpaceShip.getX() - SPEED);
@@ -91,6 +109,11 @@ public class SpaceController {
                 fxSpaceShip.setX(fxSpaceShip.getX() + SPEED);
             }
         });*/
+
+        leikur = new Leikur();      // búa til vinnsluna
+        fxStig.textProperty().bind(leikur.stiginProperty().asString()); // binda stigin við viðmótið
+        fxStig.setFocusTraversable(false);    // ekki hægt að focus-a á stigin
+
     }
 
 }
