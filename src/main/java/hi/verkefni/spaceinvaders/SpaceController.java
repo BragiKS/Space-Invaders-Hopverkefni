@@ -59,6 +59,10 @@ public class SpaceController {
         audio.sfxPlayAudio();
     }
 
+    private void gameOver(String s) {
+        time.stop();
+    }
+
     public void initialize() {
         fxLeikbord.setSc(this);
         playArea.addEventHandler(KeyEvent.KEY_PRESSED, event -> {
