@@ -8,6 +8,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.media.MediaView;
 import javafx.util.Duration;
 
 import java.util.HashMap;
@@ -15,7 +16,9 @@ import java.util.HashMap;
 public class SpaceController {
 
 
+    public MediaView mediaView;
     private Timeline time;
+    private Audio audio = new Audio();
     @FXML
     private Leikbord fxLeikbord;
     private boolean canShoot = true;
@@ -44,6 +47,7 @@ public class SpaceController {
         time = new Timeline(k);
         time.setCycleCount(Timeline.INDEFINITE);
         time.play();
+        audio.sfxPlayAudio();
 
     }
 
