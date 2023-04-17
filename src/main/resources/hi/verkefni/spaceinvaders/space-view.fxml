@@ -5,6 +5,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import hi.verkefni.spaceinvaders.Player?>
 
-<AnchorPane fx:id="playArea" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hi.verkefni.spaceinvaders.SpaceController">
+<AnchorPane fx:id="playArea" prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hi.verkefni.spaceinvaders.SpaceController">
     <Leikbord fx:id="fxLeikbord"/>
 </AnchorPane>
