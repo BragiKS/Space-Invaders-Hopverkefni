@@ -27,4 +27,7 @@ public class Leikur {
     public void nyrLeikur() {
         stigin.setValue(0);
     }
+
+    public void increaseScore() {
+    }
 }

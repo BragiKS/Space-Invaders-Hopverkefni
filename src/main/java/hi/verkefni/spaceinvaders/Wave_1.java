@@ -10,23 +10,31 @@ public class Wave_1 {
     public Wave_1(Leikbord leikbord) {
 
         Alien_one alien1 = new Alien_one();
+        leikbord.getEnemies().add(alien1);
         alien1.setTranslateX(100);
         Alien_one alien2 = new Alien_one();
+        leikbord.getEnemies().add(alien2);
         alien2.setTranslateX(200);
         Alien_one alien3 = new Alien_one();
+        leikbord.getEnemies().add(alien3);
         alien3.setTranslateX(300);
         Alien_one alien4 = new Alien_one();
+        leikbord.getEnemies().add(alien4);
         alien4.setTranslateX(400);
         Alien_one alien5 = new Alien_one();
+        leikbord.getEnemies().add(alien5);
         alien5.setTranslateX(100);
         alien5.setTranslateY(-100);
         Alien_one alien6 = new Alien_one();
+        leikbord.getEnemies().add(alien6);
         alien6.setTranslateX(200);
         alien6.setTranslateY(-100);
         Alien_one alien7 = new Alien_one();
+        leikbord.getEnemies().add(alien7);
         alien7.setTranslateX(300);
         alien7.setTranslateY(-100);
         Alien_one alien8 = new Alien_one();
+        leikbord.getEnemies().add(alien8);
         alien8.setTranslateX(400);
         alien8.setTranslateY(-100);
 
