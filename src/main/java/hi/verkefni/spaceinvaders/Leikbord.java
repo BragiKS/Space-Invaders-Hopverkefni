@@ -1,8 +1,10 @@
 package hi.verkefni.spaceinvaders;
 
+import javafx.animation.PauseTransition;
 import javafx.fxml.FXML;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
+import javafx.util.Duration;
 
 import java.util.List;
 import java.util.ArrayList;
@@ -86,6 +88,19 @@ public class Leikbord extends AnchorPane implements LeikHluturInterface {
     public void removeLaser(ImageView laser) {
         lasers.remove(laser); // Remove the laser from the lasers list
         getChildren().remove(laser); // Remove the laser ImageView from the game board
+    }
+
+    public void explosion(double x,double y) {
+        Boom explode = new Boom();
+        explode.setTranslateX(x);
+        explode.setTranslateY(y);
+        getChildren().add(explode);
+
+        PauseTransition pause = new PauseTransition(Duration.seconds(0.5));
+        pause.setOnFinished(e -> {
+            getChildren().remove(explode);
+        });
+        pause.play();
     }
 
     public boolean allEnemiesDestroyed() {

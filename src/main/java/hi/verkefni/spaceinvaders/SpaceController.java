@@ -127,8 +127,6 @@ public class SpaceController {
 
     }
 
-
-
     public void checkCollisions() {
         // Create a list to hold enemies and lasers to remove after the loop
         List<ImageView> enemiesToRemove = new ArrayList<>();
@@ -140,9 +138,14 @@ public class SpaceController {
             for (ImageView enemy : fxLeikbord.getEnemies()) {
                 // Check for collision between the laser and the enemy
                 if (laser.getBoundsInParent().intersects(enemy.getBoundsInParent())) {
+
+                    //explosion on enemy hit
+                    fxLeikbord.explosion(enemy.getX(), enemy.getY());
+
                     // Add the collided laser and enemy to the lists for removal
                     lasersToRemove.add(laser);
                     enemiesToRemove.add(enemy);
+
                 }
             }
         }
