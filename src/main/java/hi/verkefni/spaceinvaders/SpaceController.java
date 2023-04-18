@@ -12,7 +12,10 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.media.MediaView;
 import javafx.util.Duration;
 import hi.verkefni.spaceinvaders.Leikur;
+
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 
 public class SpaceController {
 
@@ -39,23 +42,12 @@ public class SpaceController {
     }
 
     public void startGame() {
+        List<ImageView> enemiesToRemove = new ArrayList<>();
+        List<ImageView> lasersToRemove = new ArrayList<>();
         KeyFrame k = new KeyFrame(Duration.millis(10),
                 e -> {
                     fxLeikbord.afram();
-                    for (ImageView enemy : fxLeikbord.getEnemies()) {
-                        for (ImageView laser : fxLeikbord.getLasers()) {
-                            if (checkCollision(enemy, laser)) {
-                                // Handle collision
-                                fxLeikbord.removeEnemy(enemy);
-                                fxLeikbord.removeLaser(laser);
-                                leikur.increaseScore(); // You need to create this method in the Leikur class to increase the score
-                                if (fxLeikbord.allEnemiesDestroyed()) {
-                                    // You need to create this method in the FxLeikbord class to check if all enemies are destroyed
-                                    // Handle winning the game, e.g., move to the next level or show a victory screen
-                                }
-                            }
-                        }
-                    }
+                    checkCollisions();
                     fxLeikbord.getFxSpaceShip();
                     leikur.haekkaStigin();
                     //sja um stig
@@ -111,9 +103,7 @@ public class SpaceController {
         t.play();
     }
 
-    private boolean checkCollision(ImageView a, ImageView b) {
-        return a.getBoundsInParent().intersects(b.getBoundsInParent());
-    }
+
 
     public void initialize(){
         fxLeikbord.setSc(this);
@@ -135,4 +125,32 @@ public class SpaceController {
 
     }
 
+
+
+    public void checkCollisions() {
+        // Create a list to hold enemies and lasers to remove after the loop
+        List<ImageView> enemiesToRemove = new ArrayList<>();
+        List<ImageView> lasersToRemove = new ArrayList<>();
+
+        // Iterate over lasers
+        for (ImageView laser : fxLeikbord.getLasers()) {
+            // Iterate over enemies
+            for (ImageView enemy : fxLeikbord.getEnemies()) {
+                // Check for collision between the laser and the enemy
+                if (laser.getBoundsInParent().intersects(enemy.getBoundsInParent())) {
+                    // Add the collided laser and enemy to the lists for removal
+                    lasersToRemove.add(laser);
+                    enemiesToRemove.add(enemy);
+                }
+            }
+        }
+
+        // Remove collided enemies and lasers
+        for (ImageView enemy : enemiesToRemove) {
+            fxLeikbord.removeEnemy(enemy);
+        }
+        for (ImageView laser : lasersToRemove) {
+            fxLeikbord.removeLaser(laser);
+        }
+    }
 }
