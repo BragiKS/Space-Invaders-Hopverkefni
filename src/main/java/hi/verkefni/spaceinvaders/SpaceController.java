@@ -42,6 +42,20 @@ public class SpaceController {
         KeyFrame k = new KeyFrame(Duration.millis(10),
                 e -> {
                     fxLeikbord.afram();
+                    for (ImageView enemy : fxLeikbord.getEnemies()) {
+                        for (ImageView laser : fxLeikbord.getLasers()) {
+                            if (checkCollision(enemy, laser)) {
+                                // Handle collision
+                                fxLeikbord.removeEnemy(enemy);
+                                fxLeikbord.removeLaser(laser);
+                                leikur.increaseScore(); // You need to create this method in the Leikur class to increase the score
+                                if (fxLeikbord.allEnemiesDestroyed()) {
+                                    // You need to create this method in the FxLeikbord class to check if all enemies are destroyed
+                                    // Handle winning the game, e.g., move to the next level or show a victory screen
+                                }
+                            }
+                        }
+                    }
                     fxLeikbord.getFxSpaceShip();
                     leikur.haekkaStigin();
                     //sja um stig
@@ -97,9 +111,13 @@ public class SpaceController {
         t.play();
     }
 
+    private boolean checkCollision(ImageView a, ImageView b) {
+        return a.getBoundsInParent().intersects(b.getBoundsInParent());
+    }
+
     public void initialize(){
         fxLeikbord.setSc(this);
-        new Wave_2(fxLeikbord);
+        new Wave_1(fxLeikbord);
 
 
         /*playArea.addEventHandler(KeyEvent.KEY_PRESSED, event -> {
