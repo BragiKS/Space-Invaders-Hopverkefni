@@ -8,20 +8,33 @@ import javafx.util.Duration;
 public class Wave_2 {
     public Wave_2(Leikbord leikbord) {
         Alien_one alien1 = new Alien_one();
+        leikbord.getEnemies().add(alien1);
         alien1.setTranslateX(100);
+
         Alien_one alien2 = new Alien_one();
+        leikbord.getEnemies().add(alien2);
         alien2.setTranslateX(200);
+
         Alien_one alien3 = new Alien_one();
+        leikbord.getEnemies().add(alien3);
         alien3.setTranslateX(300);
+
         Alien_one alien4 = new Alien_one();
+        leikbord.getEnemies().add(alien4);
         alien4.setTranslateX(400);
+
         Alien_two shooter1 = new Alien_two();
+        leikbord.getEnemies().add(shooter1);
         shooter1.setTranslateX(150);
         shooter1.setTranslateY(-100);
+
         Alien_two shooter2 = new Alien_two();
+        leikbord.getEnemies().add(shooter2);
         shooter2.setTranslateX(250);
         shooter2.setTranslateY(-100);
+
         Alien_two shooter3 = new Alien_two();
+        leikbord.getEnemies().add(shooter3);
         shooter3.setTranslateX(350);
         shooter3.setTranslateY(-100);
 
