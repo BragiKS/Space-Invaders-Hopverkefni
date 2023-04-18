@@ -47,7 +47,7 @@ public class Player extends ImageView {
     public void Right() {
         Leikbord parent = (Leikbord) this.getParent();
         Bounds l = parent.getBoundsInParent();
-        if (400 > getX()) {
+        if (450 > getX()) {
             setX(getX() + SPEED);
         }
     }
@@ -55,7 +55,7 @@ public class Player extends ImageView {
 
         Shot bullet = new Shot();
         leikbordi.getLasers().add(bullet);
-        bullet.setTranslateX(getX()+52);
+        bullet.setTranslateX(getX()+74);
         bullet.setTranslateY(getY()-10);
 
 

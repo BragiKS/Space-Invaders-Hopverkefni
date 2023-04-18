@@ -4,8 +4,8 @@
 <?import javafx.scene.image.ImageView?>
 
 
-<fx:root fx:id="fxShot" fitHeight="50.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true" type="ImageView" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root fx:id="fxShot" fitHeight="20.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" type="ImageView" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
    <image>
-      <Image url="@img/playerShoot.png" />
+      <Image url="@img/playerShootTrim.png" />
    </image>
 </fx:root>
