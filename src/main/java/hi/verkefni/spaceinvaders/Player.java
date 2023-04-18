@@ -19,6 +19,8 @@ public class Player extends ImageView {
     @FXML
     private Shot fxShot;
 
+    private Audio audio = new Audio();
+
     public Player() {
         FXML_Lestur.lesa(this, "player-view.fxml");
         setLayoutX(getImage().getWidth() / 2);
@@ -60,6 +62,7 @@ public class Player extends ImageView {
 
 
         leikbordi.getChildren().add(bullet);
+        audio.shootSound();
 
         Timeline bulletTimeline = new Timeline(new KeyFrame(Duration.seconds(0.0250), e -> {
             bullet.setTranslateY(bullet.getTranslateY() - 5);
