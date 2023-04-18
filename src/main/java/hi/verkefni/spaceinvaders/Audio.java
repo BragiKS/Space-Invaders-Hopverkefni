@@ -39,14 +39,35 @@ public class Audio {
         }
     }
 
+    public void shootSound() {
+        try {
+            String path = "/shoot.wav";
+            Media audioFile = new Media(getClass().getResource(path).toExternalForm());
+            mp = new MediaPlayer(audioFile);
+            mp.play();
+        } catch(Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void enemyDestroyedSound() {
+        try {
+            String path = "/invaderkilled.wav";
+            Media audioFile = new Media(getClass().getResource(path).toExternalForm());
+            mp = new MediaPlayer(audioFile);
+            mp.play();
+        } catch(Exception e) {
+            e.printStackTrace();
+        }
+    }
+
 
     public void gameOverAudio() {
         try {
             String path = "/game-over.mp3";
             Media audioFile = new Media(getClass().getResource(path).toExternalForm());
-            MediaPlayer mediaPlayer = new MediaPlayer(audioFile);
-            mediaPlayer.setCycleCount(MediaPlayer.INDEFINITE); // Set cycle count to repeat indefinitely
-            mediaPlayer.play();
+            mp = new MediaPlayer(audioFile);
+            mp.play();
         } catch (Exception e) {
             e.printStackTrace();
         }
