@@ -140,7 +140,7 @@ public class SpaceController {
                 if (laser.getBoundsInParent().intersects(enemy.getBoundsInParent())) {
 
                     //explosion on enemy hit
-                    fxLeikbord.explosion(enemy.getX(), enemy.getY());
+                    fxLeikbord.explosion(enemy.getTranslateX(), enemy.getTranslateY());
 
                     // Add the collided laser and enemy to the lists for removal
                     lasersToRemove.add(laser);
