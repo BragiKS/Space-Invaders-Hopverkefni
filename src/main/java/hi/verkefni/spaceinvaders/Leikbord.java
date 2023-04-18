@@ -13,6 +13,8 @@ public class Leikbord extends AnchorPane implements LeikHluturInterface {
     private List<ImageView> enemies;
     private List<ImageView> lasers;
 
+    private Audio audio = new Audio();
+
 
 
     public SpaceController getSc(){
@@ -78,6 +80,7 @@ public class Leikbord extends AnchorPane implements LeikHluturInterface {
     public void removeEnemy(ImageView enemy) {
         enemies.remove(enemy); // Remove the enemy from the enemies list
         getChildren().remove(enemy); // Remove the enemy ImageView from the game board
+        audio.enemyDestroyedSound();
     }
 
     public void removeLaser(ImageView laser) {
