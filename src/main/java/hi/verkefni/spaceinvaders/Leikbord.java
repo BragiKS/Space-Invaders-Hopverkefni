@@ -9,7 +9,7 @@ import javafx.util.Duration;
 import java.util.List;
 import java.util.ArrayList;
 
-public class Leikbord extends AnchorPane implements LeikHluturInterface {
+public class Leikbord extends AnchorPane {
     //controller stuff
     private SpaceController sc;
     private List<ImageView> enemies;
@@ -43,16 +43,6 @@ public class Leikbord extends AnchorPane implements LeikHluturInterface {
     public static void main(String[] args) {
 
     }
-    @Override
-    public void afram() {
-       /* if (fxSpaceShip.getEnemies() == null) { // bolti er ekki á neinum palli
-            fxSpaceShip.afram(); // eitt skref vinstri eða hægri en svo ...
-           // fxenemies.setStefna(.DOWN); // niður
-        } else {
-            fxBolti.aframAPalli(); // má færa bolta til vinstri eða hægri
-        }*/
-    }
-
     public boolean shipShoot() {
         //ef líf klárast
         return true;

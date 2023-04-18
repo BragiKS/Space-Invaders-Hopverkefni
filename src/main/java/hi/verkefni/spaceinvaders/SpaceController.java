@@ -31,6 +31,8 @@ public class SpaceController {
     @FXML
     private Label fxStig;
     private boolean canShoot = true;
+
+    private int Wavecounter = 1;
     private double shootCooldown = 0.5; // Cooldown duration in seconds
     private static final double SPEED = 5.0;
 
@@ -44,19 +46,17 @@ public class SpaceController {
     }
 
     public void startGame() {
-        List<ImageView> enemiesToRemove = new ArrayList<>();
-        List<ImageView> lasersToRemove = new ArrayList<>();
         KeyFrame k = new KeyFrame(Duration.millis(10),
                 e -> {
-                    fxLeikbord.afram();
                     checkCollisions();
-                    fxLeikbord.getFxSpaceShip();
                     leikur.haekkaStigin();
-                    //sja um stig
-                    //leikurinn.haekkaStigin();
-                    //ef skip er skotið
-                    if (fxLeikbord.shipShoot()) {
-                        //leikLokid("Boom!");
+                    if (fxLeikbord.allEnemiesDestroyed() && Wavecounter == 1) {
+
+                        new Wave_2(fxLeikbord);
+                        Wavecounter++;
+                    }
+                    if (fxLeikbord.allEnemiesDestroyed() && Wavecounter == 2) {
+                        //new Wave_3(fxLeikbord)
                     }
                 });
         time = new Timeline(k);
@@ -109,8 +109,7 @@ public class SpaceController {
 
     public void initialize(){
         fxLeikbord.setSc(this);
-        //new Wave_1(fxLeikbord);
-        new Wave_2(fxLeikbord);
+        new Wave_1(fxLeikbord);
 
 
         /*playArea.addEventHandler(KeyEvent.KEY_PRESSED, event -> {
