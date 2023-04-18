@@ -4,21 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a0dbeb9b-4ab3-44ff-860e-261fd64e40b9" name="Changes" comment="Bætti við hreyfingu á enemies">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/hi/verkefni/spaceinvaders/img/alien1Trim.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/hi/verkefni/spaceinvaders/img/playerShootTrim.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hi/verkefni/spaceinvaders/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hi/verkefni/spaceinvaders/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hi/verkefni/spaceinvaders/SpaceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hi/verkefni/spaceinvaders/SpaceController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hi/verkefni/spaceinvaders/Wave_1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hi/verkefni/spaceinvaders/Wave_1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/hi/verkefni/spaceinvaders/alien1-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hi/verkefni/spaceinvaders/alien1-view.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/hi/verkefni/spaceinvaders/shot-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hi/verkefni/spaceinvaders/shot-view.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/hi/verkefni/spaceinvaders/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hi/verkefni/spaceinvaders/Player.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/hi/verkefni/spaceinvaders/SpaceController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hi/verkefni/spaceinvaders/SpaceController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/hi/verkefni/spaceinvaders/Wave_1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hi/verkefni/spaceinvaders/Wave_1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/hi/verkefni/spaceinvaders/alien1-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hi/verkefni/spaceinvaders/alien1-view.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/hi/verkefni/spaceinvaders/shot-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hi/verkefni/spaceinvaders/shot-view.fxml" afterDir="false" />
-    </list>
+    <list default="true" id="a0dbeb9b-4ab3-44ff-860e-261fd64e40b9" name="Changes" comment="Bætti við hreyfingu á enemies" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -76,7 +62,6 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "ASKED_ADD_EXTERNAL_FILES": "true",
-    "Git.Branch.Popup.ShowAllRemotes": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
@@ -87,13 +72,15 @@
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\bragi\OneDrive\Documents\Hi\SpaceInvaders\src\main\resources\hi\verkefni\spaceinvaders\img" />
       <recent name="C:\Tölvunarfræði\HBV201G vidmotsforritun\SpaceInvaders\src\main\resources\hi\verkefni\spaceinvaders" />
     </key>
   </component>
@@ -115,7 +102,8 @@
       <workItem from="1681477695687" duration="3811000" />
       <workItem from="1681726702559" duration="2305000" />
       <workItem from="1681767844383" duration="109000" />
-      <workItem from="1681821186348" duration="1599000" />
+      <workItem from="1681821186348" duration="3178000" />
+      <workItem from="1681824759789" duration="1372000" />
     </task>
     <task id="LOCAL-00001" summary="bætti við alien1">
       <created>1681477521267</created>
@@ -191,6 +179,11 @@
           <properties class="java.lang.IllegalStateException" package="java.lang" />
           <option name="timeStamp" value="1" />
         </breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/hi/verkefni/spaceinvaders/SpaceApplication.java</url>
+          <line>41</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
