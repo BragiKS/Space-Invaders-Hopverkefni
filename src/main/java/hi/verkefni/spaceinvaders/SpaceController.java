@@ -49,6 +49,7 @@ public class SpaceController {
         KeyFrame k = new KeyFrame(Duration.millis(10),
                 e -> {
                     checkCollisions();
+                    playerCollision();
                     leikur.haekkaStigin();
                     if (fxLeikbord.allEnemiesDestroyed() && Wavecounter == 1) {
 
@@ -126,6 +127,22 @@ public class SpaceController {
 
     }
 
+    public void playerCollision() {
+        List<ImageView> lasersToRemove = new ArrayList<>();
+
+        for (ImageView laser : fxLeikbord.getEnemyLasers()) {
+            if (laser.getBoundsInParent().intersects(fxLeikbord.getFxSpaceShip().getBoundsInParent())) {
+
+                lasersToRemove.add(laser);
+                System.out.println("YOU DEAD! BITCH");
+            }
+        }
+
+        for (ImageView laser : lasersToRemove) {
+            fxLeikbord.removeEnemyLaser(laser);
+        }
+    }
+
     public void checkCollisions() {
         // Create a list to hold enemies and lasers to remove after the loop
         List<ImageView> enemiesToRemove = new ArrayList<>();
@@ -140,6 +157,8 @@ public class SpaceController {
 
                     //explosion on enemy hit
                     fxLeikbord.explosion(enemy.getTranslateX(), enemy.getTranslateY());
+
+                    //mark enemy as dead
 
                     // Add the collided laser and enemy to the lists for removal
                     lasersToRemove.add(laser);

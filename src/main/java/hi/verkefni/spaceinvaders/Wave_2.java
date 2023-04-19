@@ -60,7 +60,7 @@ public class Wave_2 {
 
             shootingtimer++;
 
-            if (shootingtimer % 20 == 0 && shootingtimer > 59) {
+            if (shootingtimer % 20 == 0 && shootingtimer > 39) {
                 shooter1.Shoot(leikbord);
                 shooter2.Shoot(leikbord);
                 shooter3.Shoot(leikbord);
