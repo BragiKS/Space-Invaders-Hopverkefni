@@ -31,27 +31,26 @@ public class Wave_2 {
         // Alien and shooter timeline
         Timeline alienTimeline = new Timeline(new KeyFrame(Duration.millis(160), e -> {
             for (Alien_one alien : aliens) {
-                if (alien.getTranslateY() < 200) {
-                    alien.setTranslateY(alien.getTranslateY() + 5);
-                }
+                alien.setTranslateY(alien.getTranslateY() + 5);
             }
 
             for (Alien_two shooter : shooters) {
-                if (shooter.getTranslateY() < 200) {
-                    shooter.setTranslateY(shooter.getTranslateY() + 5);
-                }
+                shooter.setTranslateY(shooter.getTranslateY() + 5);
             }
+        }));
+        alienTimeline.setCycleCount(40);
+        alienTimeline.play();
 
+        Timeline shootingTimeline = new Timeline(new KeyFrame(Duration.seconds(2), e -> {
             shootingtimer++;
-
-            if (shootingtimer % 20 == 0 && shootingtimer > 39) {
+            if (shootingtimer > 1) {
                 for (Alien_two shooter : shooters) {
                     shooter.Shoot(leikbord);
                 }
             }
         }));
-        alienTimeline.setCycleCount(Timeline.INDEFINITE);
-        alienTimeline.play();
+        shootingTimeline.setCycleCount(Timeline.INDEFINITE);
+        shootingTimeline.play();
 
         // Translate transitions for aliens and shooters
         for (int i = 0; i < aliens.length; i++) {

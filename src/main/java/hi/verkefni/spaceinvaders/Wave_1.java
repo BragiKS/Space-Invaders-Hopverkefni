@@ -6,6 +6,7 @@ import javafx.animation.TranslateTransition;
 import javafx.util.Duration;
 
 public class Wave_1 {
+    private int countaliens = 0;
     public Wave_1(Leikbord leikbord) {
         // Aliens initialization
         Alien_one[] aliens = new Alien_one[8];
@@ -21,12 +22,10 @@ public class Wave_1 {
         // Alien timeline
         Timeline alienTimeline = new Timeline(new KeyFrame(Duration.millis(160), e -> {
             for (Alien_one alien : aliens) {
-                if (alien.getTranslateY() < 200) {
-                    alien.setTranslateY(alien.getTranslateY() + 5);
-                }
+                alien.setTranslateY(alien.getTranslateY() + 5);
             }
         }));
-        alienTimeline.setCycleCount(Timeline.INDEFINITE);
+        alienTimeline.setCycleCount(40);
         alienTimeline.play();
 
         // Translate transitions for aliens

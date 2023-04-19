@@ -6,6 +6,7 @@ import javafx.animation.Timeline;
 import javafx.collections.FXCollections;
 import javafx.fxml.FXML;
 import javafx.geometry.Bounds;
+import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyCode;
@@ -36,7 +37,7 @@ public class SpaceController {
 
     private double shootCooldown = 0.2; // Cooldown duration in seconds //set it to 0.5
 
-    private int playerLife = 3;
+    private int playerLife = 1;
 
     private static final double SPEED = 5.0;
 
@@ -56,6 +57,9 @@ public class SpaceController {
                     playerCollision();
                     if (playerLife == 0) {
                         //GAMEOVER!
+                        System.out.println("DEADEDEAD");
+                        ViewSwitcher.switchTo(View.OVER);
+                        time.stop();
                     }
                     if (fxLeikbord.allEnemiesDestroyed() && Wavecounter == 1) {
 
