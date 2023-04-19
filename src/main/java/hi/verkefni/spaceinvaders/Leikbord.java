@@ -14,6 +14,7 @@ public class Leikbord extends AnchorPane {
     private SpaceController sc;
     private List<ImageView> enemies;
     private List<ImageView> lasers;
+    private List<ImageView> enemylasers;
 
     private Audio audio = new Audio();
 
@@ -37,6 +38,7 @@ public class Leikbord extends AnchorPane {
     public Leikbord() {FXML_Lestur.lesa(this,"leikbord-view.fxml");
             enemies = new ArrayList<>();
             lasers = new ArrayList<>();
+            enemylasers = new ArrayList<>();
         }
 
 
@@ -66,6 +68,10 @@ public class Leikbord extends AnchorPane {
         return lasers;
     }
 
+    public List<ImageView> getEnemyLasers() {
+        return enemylasers;
+    }
+
 
 
 
@@ -77,6 +83,10 @@ public class Leikbord extends AnchorPane {
 
     public void removeLaser(ImageView laser) {
         lasers.remove(laser); // Remove the laser from the lasers list
+        getChildren().remove(laser); // Remove the laser ImageView from the game board
+    }
+    public void removeEnemyLaser(ImageView laser) {
+        enemylasers.remove(laser); // Remove the laser from the lasers list
         getChildren().remove(laser); // Remove the laser ImageView from the game board
     }
 
