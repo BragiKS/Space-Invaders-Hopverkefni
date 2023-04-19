@@ -15,6 +15,7 @@ public class Leikbord extends AnchorPane {
     private List<ImageView> enemies;
     private List<ImageView> lasers;
     private List<ImageView> enemylasers;
+    private Alien_three boss;
 
     private Audio audio = new Audio();
 
@@ -45,10 +46,6 @@ public class Leikbord extends AnchorPane {
     public static void main(String[] args) {
 
     }
-    public boolean shipShoot() {
-        //ef líf klárast
-        return true;
-    }
 
     public void nyrLeikur() {
         getChildren().clear();
@@ -62,6 +59,14 @@ public class Leikbord extends AnchorPane {
 
     public List<ImageView> getEnemies() {
         return enemies;
+    }
+
+    public Alien_three getBoss() {
+        return boss;
+    }
+
+    public void setBoss(Alien_three boss) {
+        this.boss = boss;
     }
 
     public List<ImageView> getLasers() {

@@ -37,7 +37,7 @@ public class SpaceController {
 
     private double shootCooldown = 0.2; // Cooldown duration in seconds //set it to 0.5
 
-    private int playerLife = 1;
+    private int playerLife = 3;
 
     private static final double SPEED = 5.0;
 
@@ -121,7 +121,7 @@ public class SpaceController {
 
     public void initialize(){
         fxLeikbord.setSc(this);
-        new Wave_3(fxLeikbord);
+        new Wave_Boss(fxLeikbord);
 
 
         /*playArea.addEventHandler(KeyEvent.KEY_PRESSED, event -> {
@@ -187,5 +187,10 @@ public class SpaceController {
         for (ImageView laser : lasersToRemove) {
             fxLeikbord.removeLaser(laser);
         }
+    }
+
+    public void bossCollision() {
+        List<ImageView> lasersToRemove = new ArrayList<>();
+
     }
 }
