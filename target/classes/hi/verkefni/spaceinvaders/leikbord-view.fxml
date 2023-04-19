@@ -6,7 +6,7 @@
 <?import hi.verkefni.spaceinvaders.Alien_two?>
 <?import hi.verkefni.spaceinvaders.Alien_three?>
 <?import java.net.URL?>
-<fx:root fx:id="fxLeikbord" prefHeight="600.0" prefWidth="600.0" type="javafx.scene.layout.Pane" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root fx:id="fxLeikbord" prefHeight="600.0" prefWidth="602.0" type="javafx.scene.layout.Pane" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
     <stylesheets>
         <URL value="@styles.css"/>
     </stylesheets>

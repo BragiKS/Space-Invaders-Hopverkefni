@@ -57,7 +57,6 @@ public class SpaceController {
                     if (playerLife == 0) {
                         //GAMEOVER!
                     }
-                    leikur.haekkaStigin();
                     if (fxLeikbord.allEnemiesDestroyed() && Wavecounter == 1) {
 
                         new Wave_2(fxLeikbord);
@@ -166,7 +165,8 @@ public class SpaceController {
                     //explosion on enemy hit
                     fxLeikbord.explosion(enemy.getTranslateX(), enemy.getTranslateY());
 
-                    //mark enemy as dead
+                    //increase score when enemy is killed
+                    leikur.haekkaStigin();
 
                     // Add the collided laser and enemy to the lists for removal
                     lasersToRemove.add(laser);

@@ -21,7 +21,7 @@ public class Leikur {
 
 
     public void haekkaStigin() {
-        stigin.setValue(stigin.getValue()+1);
+        stigin.setValue(stigin.getValue()+50);
     }
 
     public void nyrLeikur() {

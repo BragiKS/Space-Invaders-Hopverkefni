@@ -49,7 +49,7 @@ public class Player extends ImageView {
     public void Right() {
         Leikbord parent = (Leikbord) this.getParent();
         Bounds l = parent.getBoundsInParent();
-        if (450 > getX()) {
+        if (525 > getX()) {
             setX(getX() + SPEED);
         }
     }
