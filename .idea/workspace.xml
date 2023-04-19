@@ -8,9 +8,15 @@
       <change afterPath="$PROJECT_DIR$/src/main/java/hi/verkefni/spaceinvaders/Alienshot.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/resources/hi/verkefni/spaceinvaders/alienshot-view.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+<<<<<<< Updated upstream
       <change beforePath="$PROJECT_DIR$/src/main/java/hi/verkefni/spaceinvaders/Alien_two.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hi/verkefni/spaceinvaders/Alien_two.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/hi/verkefni/spaceinvaders/Leikbord.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hi/verkefni/spaceinvaders/Leikbord.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/hi/verkefni/spaceinvaders/Wave_2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hi/verkefni/spaceinvaders/Wave_2.java" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/src/main/resources/hi/verkefni/spaceinvaders/Space.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/hi/verkefni/spaceinvaders/img/game over.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/hi/verkefni/spaceinvaders/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hi/verkefni/spaceinvaders/styles.css" afterDir="false" />
+>>>>>>> Stashed changes
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,6 +117,8 @@
       <workItem from="1681767844383" duration="109000" />
       <workItem from="1681821186348" duration="3178000" />
       <workItem from="1681824759789" duration="1372000" />
+      <workItem from="1681840240771" duration="78000" />
+      <workItem from="1681898774992" duration="1703000" />
     </task>
     <task id="LOCAL-00001" summary="bætti við alien1">
       <created>1681477521267</created>
