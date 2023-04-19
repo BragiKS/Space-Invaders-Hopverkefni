@@ -4,210 +4,37 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a0dbeb9b-4ab3-44ff-860e-261fd64e40b9" name="Changes" comment="Hitbox fix">
-      <change afterPath="$PROJECT_DIR$/src/main/java/hi/verkefni/spaceinvaders/Alienshot.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/hi/verkefni/spaceinvaders/alienshot-view.fxml" afterDir="false" />
+    <list default="true" id="abf5a99a-2ca4-4f06-af4d-b09a25e96253" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/target/classes/hi/verkefni/spaceinvaders/Alienshot.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/hi/verkefni/spaceinvaders/alienshot-view.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-<<<<<<< Updated upstream
-      <change beforePath="$PROJECT_DIR$/src/main/java/hi/verkefni/spaceinvaders/Alien_two.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hi/verkefni/spaceinvaders/Alien_two.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hi/verkefni/spaceinvaders/Leikbord.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hi/verkefni/spaceinvaders/Leikbord.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hi/verkefni/spaceinvaders/Wave_2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hi/verkefni/spaceinvaders/Wave_2.java" afterDir="false" />
-=======
-      <change beforePath="$PROJECT_DIR$/src/main/resources/hi/verkefni/spaceinvaders/Space.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/hi/verkefni/spaceinvaders/img/game over.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/hi/verkefni/spaceinvaders/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hi/verkefni/spaceinvaders/styles.css" afterDir="false" />
->>>>>>> Stashed changes
+      <change beforePath="$PROJECT_DIR$/src/main/resources/hi/verkefni/spaceinvaders/space-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hi/verkefni/spaceinvaders/space-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/hi/verkefni/spaceinvaders/Alien_two.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hi/verkefni/spaceinvaders/Alien_two.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/hi/verkefni/spaceinvaders/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hi/verkefni/spaceinvaders/Player.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/hi/verkefni/spaceinvaders/SpaceController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hi/verkefni/spaceinvaders/SpaceController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/hi/verkefni/spaceinvaders/Wave_2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hi/verkefni/spaceinvaders/Wave_2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/hi/verkefni/spaceinvaders/alien2-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hi/verkefni/spaceinvaders/alien2-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/hi/verkefni/spaceinvaders/alien3-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hi/verkefni/spaceinvaders/alien3-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/hi/verkefni/spaceinvaders/img/Boom.png" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hi/verkefni/spaceinvaders/img/Boom.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/hi/verkefni/spaceinvaders/img/alien2.png" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hi/verkefni/spaceinvaders/img/alien2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/hi/verkefni/spaceinvaders/img/alien3.png" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hi/verkefni/spaceinvaders/img/alien3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/hi/verkefni/spaceinvaders/img/alienShoot.png" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hi/verkefni/spaceinvaders/img/alienShoot.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/hi/verkefni/spaceinvaders/img/player.png" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hi/verkefni/spaceinvaders/img/player.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/hi/verkefni/spaceinvaders/leikbord-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hi/verkefni/spaceinvaders/leikbord-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/hi/verkefni/spaceinvaders/player-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hi/verkefni/spaceinvaders/player-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="CSS File" />
-        <option value="FxmlFile" />
-        <option value="Class" />
-      </list>
-    </option>
-  </component>
-  <component name="Git.Merge.Settings">
-    <option name="BRANCH" value="main" />
-  </component>
-  <component name="Git.Settings">
-    <option name="RECENT_BRANCH_BY_REPOSITORY">
-      <map>
-        <entry key="$PROJECT_DIR$" value="main" />
-      </map>
-    </option>
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="GitHubPullRequestSearchHistory">{
-  &quot;lastFilter&quot;: {
-    &quot;state&quot;: &quot;OPEN&quot;
-  }
-}</component>
-  <component name="GithubPullRequestsUISettings">
-    <option name="selectedUrlAndAccountId">
-      <UrlAndAccount>
-        <option name="accountId" value="3a088ee3-8ae6-48de-9ea5-fa1470f0b613" />
-        <option name="url" value="https://github.com/BragiKS/Space-Invaders-Hopverkefni.git" />
-      </UrlAndAccount>
-    </option>
-  </component>
-  <component name="MarkdownSettingsMigration">
-    <option name="stateVersion" value="1" />
-  </component>
-  <component name="MavenImportPreferences">
-    <option name="generalSettings">
-      <MavenGeneralSettings>
-        <option name="useMavenConfig" value="true" />
-      </MavenGeneralSettings>
-    </option>
-  </component>
-  <component name="ProjectId" id="2NSWk6johbyDU0rx9KaWa7B6ODX" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
-  <component name="ProjectViewState">
-    <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showLibraryContents" value="true" />
-  </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Tölvunarfræði&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "node.js.selected.package.tslint": "(autodetect)"
   }
-}</component>
-  <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Tölvunarfræði\HBV201G vidmotsforritun\SpaceInvaders\src\main\resources\hi\verkefni\spaceinvaders" />
-    </key>
-  </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+}]]></component>
   <component name="TaskManager">
-    <task active="true" id="Default" summary="Default task">
-      <changelist id="a0dbeb9b-4ab3-44ff-860e-261fd64e40b9" name="Changes" comment="" />
-      <created>1679658106509</created>
-      <option name="number" value="Default" />
-      <option name="presentableId" value="Default" />
-      <updated>1679658106509</updated>
-      <workItem from="1679658107836" duration="1615000" />
-      <workItem from="1681472942945" duration="378000" />
-      <workItem from="1681473342542" duration="244000" />
-      <workItem from="1681473598036" duration="894000" />
-      <workItem from="1681474648886" duration="416000" />
-      <workItem from="1681476109290" duration="709000" />
-      <workItem from="1681476840647" duration="843000" />
-      <workItem from="1681477695687" duration="3811000" />
-      <workItem from="1681726702559" duration="2305000" />
-      <workItem from="1681767844383" duration="109000" />
-      <workItem from="1681821186348" duration="3178000" />
-      <workItem from="1681824759789" duration="1372000" />
-      <workItem from="1681840240771" duration="78000" />
-      <workItem from="1681898774992" duration="1703000" />
-    </task>
-    <task id="LOCAL-00001" summary="bætti við alien1">
-      <created>1681477521267</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1681477521267</updated>
-    </task>
-    <task id="LOCAL-00002" summary="bætti við alien 2 og 3">
-      <created>1681478287781</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1681478287781</updated>
-    </task>
-    <task id="LOCAL-00003" summary="Lagað með merge við main">
-      <created>1681734480372</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1681734480372</updated>
-    </task>
-    <task id="LOCAL-00004" summary="Bætti við hreyfingu á enemies">
-      <created>1681737480578</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1681737480578</updated>
-    </task>
-    <task id="LOCAL-00005" summary="Hitbox fix">
-      <created>1681826736899</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1681826736899</updated>
-    </task>
-    <option name="localTasksCounter" value="6" />
     <servers />
-  </component>
-  <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="3" />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State>
-              <option name="FILTERS">
-                <map>
-                  <entry key="branch">
-                    <value>
-                      <list>
-                        <option value="origin/Bragi" />
-                      </list>
-                    </value>
-                  </entry>
-                </map>
-              </option>
-            </State>
-          </value>
-        </entry>
-      </map>
-    </option>
-  </component>
-  <component name="VcsManagerConfiguration">
-    <ignored-roots>
-      <path value="$PROJECT_DIR$/.." />
-    </ignored-roots>
-    <MESSAGE value="bætti við alien1" />
-    <MESSAGE value="bætti við alien 2 og 3" />
-    <MESSAGE value="Lagað með merge við main" />
-    <MESSAGE value="Bætti við hreyfingu á enemies" />
-    <MESSAGE value="Hitbox fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="Hitbox fix" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <breakpoint enabled="true" type="java-exception">
-          <properties class="java.lang.IllegalStateException" package="java.lang" />
-          <option name="timeStamp" value="1" />
-        </breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/hi/verkefni/spaceinvaders/SpaceApplication.java</url>
-          <line>41</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

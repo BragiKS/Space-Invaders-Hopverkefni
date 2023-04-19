@@ -109,7 +109,7 @@ public class SpaceController {
 
     public void initialize(){
         fxLeikbord.setSc(this);
-        new Wave_1(fxLeikbord);
+        new Wave_2(fxLeikbord);
 
 
         /*playArea.addEventHandler(KeyEvent.KEY_PRESSED, event -> {
