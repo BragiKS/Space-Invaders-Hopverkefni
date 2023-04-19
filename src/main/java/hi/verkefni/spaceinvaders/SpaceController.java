@@ -37,7 +37,7 @@ public class SpaceController {
 
     private double shootCooldown = 0.2; // Cooldown duration in seconds //set it to 0.5
 
-    private int playerLife = 3;
+    private int playerLife = 200;
 
     private static final double SPEED = 5.0;
 
@@ -55,13 +55,17 @@ public class SpaceController {
                 e -> {
                     checkCollisions();
                     playerCollision();
+                    bossCollision();
+                    /*if (Wavecounter == 4) {
+                        bossCollision();
+                    }*/
                     if (playerLife == 0) {
                         //GAMEOVER!
                         System.out.println("DEADEDEAD");
                         ViewSwitcher.switchTo(View.OVER);
                         time.stop();
                     }
-                    if (fxLeikbord.allEnemiesDestroyed() && Wavecounter == 1) {
+                    if (fxLeikbord.allEnemiesDestroyed() && Wavecounter == 2) {
 
                         new Wave_2(fxLeikbord);
                         Wavecounter++;
@@ -191,6 +195,22 @@ public class SpaceController {
 
     public void bossCollision() {
         List<ImageView> lasersToRemove = new ArrayList<>();
+
+        for (ImageView laser : fxLeikbord.getLasers()) {
+            if (laser.getBoundsInParent().intersects(fxLeikbord.getBoss().getBoundsInParent())) {
+
+                lasersToRemove.add(laser);
+                fxLeikbord.getBoss().decreaseLife();
+                System.out.println("Boss Health: "+ fxLeikbord.getBoss().getBossLife());
+                if (fxLeikbord.getBoss().getBossLife() <= 0) {
+
+                }
+            }
+        }
+
+        for (ImageView laser : lasersToRemove) {
+            fxLeikbord.removeEnemyLaser(laser);
+        }
 
     }
 }

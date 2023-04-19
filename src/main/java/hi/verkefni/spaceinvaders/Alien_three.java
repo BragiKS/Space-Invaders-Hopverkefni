@@ -6,7 +6,7 @@ import javafx.scene.image.ImageView;
 import javafx.util.Duration;
 
 public class Alien_three extends ImageView {
-    private int bossLife = 60;
+    private int bossLife = 3500;
     public Alien_three() {
         FXML_Lestur.lesa(this, "alien3-view.fxml");
     }
@@ -26,7 +26,7 @@ public class Alien_three extends ImageView {
             shot.setTranslateX(getTranslateX() + getFitWidth()/4);
             shot.setTranslateY(getTranslateY() + 30);
             leikbord.getChildren().add(shot);
-            Timeline shotTimeline = new Timeline(new KeyFrame(Duration.seconds(0.0250), e -> {
+            Timeline shotTimeline = new Timeline(new KeyFrame(Duration.millis(10), e -> {
                 shot.setTranslateY(shot.getTranslateY() + 5);
 
                 if (shot.getTranslateY() > 600) {
@@ -45,14 +45,16 @@ public class Alien_three extends ImageView {
             Alienshot[] shots = new Alienshot[3];
             for (int i = 0; i < shots.length; i++) {
                 shots[i] = new Alienshot();
-                shots[i].setRotate(30*(i - 1));
+                shots[i].setRotate(25*(1 - i));
                 leikbord.getEnemyLasers().add(shots[i]);
                 shots[i].setTranslateX(getTranslateX() + 10 + (i*20));
+                shots[i].setTranslateY(getTranslateY());
+                leikbord.getChildren().add(shots[i]);
             }
 
-            Timeline shotTimeline = new Timeline(new KeyFrame(Duration.millis(250), e -> {
+            Timeline shotTimeline = new Timeline(new KeyFrame(Duration.millis(25), e -> {
                 for (int i = 0; i < shots.length; i++) {
-                    shots[i].setTranslateX(shots[i].getTranslateX() + (i-1));
+                    shots[i].setTranslateX(shots[i].getTranslateX() + 2 * (i-1));
                     shots[i].setTranslateY(shots[i].getTranslateY() + 5);
 
                     if (shots[i].getTranslateY() > 600) {
