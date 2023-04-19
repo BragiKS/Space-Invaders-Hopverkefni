@@ -57,8 +57,8 @@ public class Player extends ImageView {
 
         Shot bullet = new Shot();
         leikbordi.getLasers().add(bullet);
-        bullet.setTranslateX(getX()+74);
-        bullet.setTranslateY(getY()-10);
+        bullet.setTranslateX(getX() + 30.5);
+        bullet.setTranslateY(getY() - 15);
 
 
         leikbordi.getChildren().add(bullet);

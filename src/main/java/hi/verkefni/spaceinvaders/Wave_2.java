@@ -56,12 +56,14 @@ public class Wave_2 {
                 shooter1.setTranslateY(shooter1.getTranslateY() + 5);
                 shooter2.setTranslateY(shooter2.getTranslateY() + 5);
                 shooter3.setTranslateY(shooter3.getTranslateY() + 5);
-                shootingtimer++;
-                if (shootingtimer == 20) {
-                    shooter1.Shoot(leikbord);
-                    shooter2.Shoot(leikbord);
-                    shooter3.Shoot(leikbord);
-                }
+            }
+
+            shootingtimer++;
+
+            if (shootingtimer % 20 == 0 && shootingtimer > 59) {
+                shooter1.Shoot(leikbord);
+                shooter2.Shoot(leikbord);
+                shooter3.Shoot(leikbord);
             }
         }));
         alienTimeline.setCycleCount(Timeline.INDEFINITE);
