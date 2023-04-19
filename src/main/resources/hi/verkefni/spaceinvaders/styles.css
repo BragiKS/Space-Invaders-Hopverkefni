@@ -1,6 +1,29 @@
 #fxLeikbord {
-    -fx-background-image: url("Space.png");
+    -fx-background-image: url("img/Space.png");
 
     -fx-background-size: 170% auto;
     -fx-background-repeat: no-repeat;
 }
+
+#gameoverimg {
+    /* fit the image in prefHeight="400.0" prefWidth="600.0" */
+    -fx-background-size: 100% 100%;
+    -fx-background-image: url("img/gameover.png");
+    
+    -fx-background-repeat: no-repeat;
+}
+
+
+
+#playagain {
+    /* text font pixel */
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #1a012b;
+    -fx-background-radius: 10;
+    -fx-border-color: #0633Fd;
+    -fx-border-width: 2;
+    -fx-border-radius: 10;
+    -fx-padding: 10 20 10 20;
+}
+
