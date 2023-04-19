@@ -50,6 +50,17 @@ public class Audio {
         }
     }
 
+    public void enemyShootSound() {
+        try {
+            String path = "/enemy-shoot.mp3";
+            Media audioFile = new Media(getClass().getResource(path).toExternalForm());
+            mp = new MediaPlayer(audioFile);
+            mp.play();
+        } catch(Exception e) {
+            e.printStackTrace();
+        }
+    }
+
     public void enemyDestroyedSound() {
         try {
             String path = "/invaderkilled.wav";
