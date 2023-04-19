@@ -33,7 +33,11 @@ public class SpaceController {
     private boolean canShoot = true;
 
     private int Wavecounter = 1;
+
     private double shootCooldown = 0.2; // Cooldown duration in seconds //set it to 0.5
+
+    private int playerLife = 3;
+
     private static final double SPEED = 5.0;
 
     private Timeline t; // tímalínan
@@ -50,6 +54,9 @@ public class SpaceController {
                 e -> {
                     checkCollisions();
                     playerCollision();
+                    if (playerLife == 0) {
+                        //GAMEOVER!
+                    }
                     leikur.haekkaStigin();
                     if (fxLeikbord.allEnemiesDestroyed() && Wavecounter == 1) {
 
@@ -135,7 +142,7 @@ public class SpaceController {
             if (laser.getBoundsInParent().intersects(fxLeikbord.getFxSpaceShip().getBoundsInParent())) {
 
                 lasersToRemove.add(laser);
-                System.out.println("YOU DEAD! BITCH");
+                playerLife--;
             }
         }
 
