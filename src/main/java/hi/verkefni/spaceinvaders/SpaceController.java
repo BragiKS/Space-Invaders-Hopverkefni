@@ -33,7 +33,7 @@ public class SpaceController {
     private boolean canShoot = true;
 
     private int Wavecounter = 1;
-    private double shootCooldown = 0.5; // Cooldown duration in seconds
+    private double shootCooldown = 0.2; // Cooldown duration in seconds //set it to 0.5
     private static final double SPEED = 5.0;
 
     private Timeline t; // tímalínan
@@ -57,7 +57,8 @@ public class SpaceController {
                         Wavecounter++;
                     }
                     if (fxLeikbord.allEnemiesDestroyed() && Wavecounter == 2) {
-                        //new Wave_3(fxLeikbord)
+                        new Wave_3(fxLeikbord);
+                        Wavecounter++;
                     }
                 });
         time = new Timeline(k);
@@ -110,7 +111,7 @@ public class SpaceController {
 
     public void initialize(){
         fxLeikbord.setSc(this);
-        new Wave_2(fxLeikbord);
+        new Wave_3(fxLeikbord);
 
 
         /*playArea.addEventHandler(KeyEvent.KEY_PRESSED, event -> {
