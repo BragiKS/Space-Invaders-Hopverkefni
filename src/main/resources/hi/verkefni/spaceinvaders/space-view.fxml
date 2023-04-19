@@ -19,7 +19,7 @@
     <Leikbord fx:id="fxLeikbord"/>
     <HBox layoutX="406.0" prefHeight="66.0" prefWidth="194.0">
         <children>
-            <Label prefHeight="52.0" prefWidth="197.0" text="Score:" textFill="#e5f53b">
+            <Label prefHeight="52.0" prefWidth="90.0" text="Score:" textFill="#e5f53b">
                 <font>
                     <Font size="24.0" />
                 </font>
