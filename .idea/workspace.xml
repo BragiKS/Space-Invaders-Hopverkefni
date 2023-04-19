@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a0dbeb9b-4ab3-44ff-860e-261fd64e40b9" name="Changes" comment="">
+    <list default="true" id="a0dbeb9b-4ab3-44ff-860e-261fd64e40b9" name="Changes" comment="Hitbox fix">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/hi/verkefni/spaceinvaders/SpaceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hi/verkefni/spaceinvaders/SpaceController.java" afterDir="false" />
     </list>
