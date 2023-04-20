@@ -4,9 +4,11 @@ import javafx.animation.KeyFrame;
 import javafx.animation.PauseTransition;
 import javafx.animation.Timeline;
 import javafx.collections.FXCollections;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.geometry.Bounds;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyCode;
@@ -28,20 +30,23 @@ public class SpaceController {
     private Audio audio = new Audio();
     @FXML
     private Leikbord fxLeikbord;
-
     @FXML
     private Label fxStig;
+    private Wave_1 wave1;
+    private Wave_2 wave2;
+    private Wave_3 wave3;
+    private Wave_Boss bosswave;
     private boolean canShoot = true;
 
     private boolean canBeHit = true;
 
-    private int Wavecounter = 4; // Set to 1
+    private int Wavecounter = 1; // Set to 1
 
     private final double shootCooldown = 0.2; // Cooldown duration in seconds //set it to 0.5
 
     private final double shieldTime = 3;
 
-    private int playerLife = 200;
+    private int playerLife = 4;
 
     Leikur leikur;
 
@@ -56,25 +61,42 @@ public class SpaceController {
                 e -> {
                     checkCollisions();
                     playerCollision();
-                    if (Wavecounter == 4) {
+                    if (Wavecounter == 5) {
                         bossCollision();
                     }
                     if (playerLife == 0) {
                         //GAMEOVER!
                         ViewSwitcher.switchTo(View.OVER);
+                        switch (Wavecounter) {
+                            case 3:
+                                wave2.stop();
+                                break;
+                            case 4:
+                                wave3.stop();
+                                break;
+                            case 5:
+                                bosswave.stop();
+                                break;
+                        }
                         time.stop();
                     }
                     if (fxLeikbord.allEnemiesDestroyed() && Wavecounter == 1) {
 
-                        new Wave_2(fxLeikbord);
+                        wave1 = new Wave_1(fxLeikbord);
                         Wavecounter++;
                     }
                     if (fxLeikbord.allEnemiesDestroyed() && Wavecounter == 2) {
-                        new Wave_3(fxLeikbord);
+                        wave2 = new Wave_2(fxLeikbord);
                         Wavecounter++;
                     }
                     if (fxLeikbord.allEnemiesDestroyed() && Wavecounter == 3) {
-                        new Wave_Boss(fxLeikbord);
+                        wave2.stop();
+                        wave3 = new Wave_3(fxLeikbord);
+                        Wavecounter++;
+                    }
+                    if (fxLeikbord.allEnemiesDestroyed() && Wavecounter == 4) {
+                        wave3.stop();
+                        bosswave = new Wave_Boss(fxLeikbord);
                         Wavecounter++;
                         //Boss music maybe?
                     }
@@ -104,7 +126,7 @@ public class SpaceController {
                             fxLeikbord.getFxSpaceShip().Right();
                         } else if (event.getCode() == KeyCode.SPACE) {
                             if (canShoot) {
-                                System.out.println("YOOO bag alerttt");
+
                                 fxLeikbord.getFxSpaceShip().Shoot(fxLeikbord);
                                 canShoot = false;
 
@@ -123,7 +145,6 @@ public class SpaceController {
 
     public void initialize(){
         fxLeikbord.setSc(this);
-        new Wave_Boss(fxLeikbord);
 
 
         leikur = new Leikur();      // búa til vinnsluna
@@ -153,7 +174,7 @@ public class SpaceController {
             }
 
             //This is to check if the charge attack in the boss fight hits the player.
-            if (Wavecounter == 4) {
+            if (Wavecounter == 5) {
                 if (fxLeikbord.getBoss().getBoundsInParent().intersects(fxLeikbord.getFxSpaceShip().getBoundsInParent())) {
 
                     playerLife--;
@@ -218,6 +239,7 @@ public class SpaceController {
                 System.out.println("Boss Health: "+ fxLeikbord.getBoss().getBossLife());
                 if (fxLeikbord.getBoss().getBossLife() <= 0) {
                     fxLeikbord.getChildren().remove(fxLeikbord.getBoss());
+                    bosswave.stop();
                     victory();
                 }
             }
@@ -226,6 +248,26 @@ public class SpaceController {
         for (ImageView laser : lasersToRemove) {
             fxLeikbord.removeEnemyLaser(laser);
         }
+
+    }
+
+    public void newgame() {
+
+        if (Wavecounter == 5) {
+            fxLeikbord.getChildren().remove(fxLeikbord.getBoss());
+        } else if (!fxLeikbord.allEnemiesDestroyed()) {
+            for (ImageView enemy : fxLeikbord.getEnemies()) {
+                fxLeikbord.getEnemies().remove(enemy);
+                fxLeikbord.getChildren().remove(enemy);
+            }
+        }
+
+
+        playerLife = 3;
+        Wavecounter = 1;
+        leikur.nyrLeikur();
+        ViewSwitcher.switchTo(View.SHOOTING);
+        time.play();
 
     }
 }

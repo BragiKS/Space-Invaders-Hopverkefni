@@ -12,6 +12,7 @@ public class Wave_Boss {
 
     private double degreeForCone = 0;
     private double counterForCone = 0;
+    private Timeline battle;
     public Wave_Boss(Leikbord leikbord) {
 
         Alien_three boss = new Alien_three();
@@ -59,7 +60,7 @@ public class Wave_Boss {
         Random random = new Random();
 
         //Battle Timeline with different phases depending on boss health remaining
-        Timeline battle = new Timeline(new KeyFrame(Duration.seconds(4), e -> {
+        battle = new Timeline(new KeyFrame(Duration.seconds(4), e -> {
 
             //Phase 1
             if (boss.getBossLife() > 1500) {
@@ -129,5 +130,9 @@ public class Wave_Boss {
             battle.play();
         });
 
+    }
+
+    public void stop() {
+        battle.stop();
     }
 }
