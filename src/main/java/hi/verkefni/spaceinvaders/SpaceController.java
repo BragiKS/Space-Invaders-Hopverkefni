@@ -61,7 +61,6 @@ public class SpaceController {
                     }
                     if (playerLife == 0) {
                         //GAMEOVER!
-                        System.out.println("DEADEDEAD");
                         ViewSwitcher.switchTo(View.OVER);
                         time.stop();
                     }
@@ -135,6 +134,8 @@ public class SpaceController {
 
     public void playerCollision() {
         List<ImageView> lasersToRemove = new ArrayList<>();
+
+        //Checks if player has been hit recently and if an enemy hits the player lives go down.
         if (canBeHit) {
             for (ImageView laser : fxLeikbord.getEnemyLasers()) {
                 if (laser.getBoundsInParent().intersects(fxLeikbord.getFxSpaceShip().getBoundsInParent())) {
@@ -151,6 +152,7 @@ public class SpaceController {
                 }
             }
 
+            //This is to check if the charge attack in the boss fight hits the player.
             if (Wavecounter == 4) {
                 if (fxLeikbord.getBoss().getBoundsInParent().intersects(fxLeikbord.getFxSpaceShip().getBoundsInParent())) {
 
