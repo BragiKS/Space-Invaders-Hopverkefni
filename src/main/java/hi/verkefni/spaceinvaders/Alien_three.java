@@ -2,6 +2,7 @@ package hi.verkefni.spaceinvaders;
 
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
+import javafx.animation.TranslateTransition;
 import javafx.scene.image.ImageView;
 import javafx.util.Duration;
 
@@ -68,5 +69,19 @@ public class Alien_three extends ImageView {
             shotTimeline.play();
             
         }
+    }
+
+    public void ChargeAttack(Leikbord leikbord, TranslateTransition tt) {
+        Timeline chargeTimeline = new Timeline(new KeyFrame(Duration.millis(10), e -> {
+
+            setTranslateY(getTranslateY() + 5);
+            if (getTranslateY() == 600) {
+                setTranslateY(-100);
+            }
+        }));
+
+        chargeTimeline.setCycleCount(140);
+        chargeTimeline.play();
+        chargeTimeline.setOnFinished(e -> tt.play());
     }
 }

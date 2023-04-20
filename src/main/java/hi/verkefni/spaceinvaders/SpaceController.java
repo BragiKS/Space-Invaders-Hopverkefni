@@ -55,17 +55,16 @@ public class SpaceController {
                 e -> {
                     checkCollisions();
                     playerCollision();
-                    bossCollision();
-                    /*if (Wavecounter == 4) {
+                    if (Wavecounter == 4) {
                         bossCollision();
-                    }*/
+                    }
                     if (playerLife == 0) {
                         //GAMEOVER!
                         System.out.println("DEADEDEAD");
                         ViewSwitcher.switchTo(View.OVER);
                         time.stop();
                     }
-                    if (fxLeikbord.allEnemiesDestroyed() && Wavecounter == 2) {
+                    if (fxLeikbord.allEnemiesDestroyed() && Wavecounter == 1) {
 
                         new Wave_2(fxLeikbord);
                         Wavecounter++;
@@ -74,12 +73,21 @@ public class SpaceController {
                         new Wave_3(fxLeikbord);
                         Wavecounter++;
                     }
+                    if (fxLeikbord.allEnemiesDestroyed() && Wavecounter == 3) {
+                        new Wave_Boss(fxLeikbord);
+                        Wavecounter++;
+                        //Boss music maybe?
+                    }
                 });
         time = new Timeline(k);
         time.setCycleCount(Timeline.INDEFINITE);
         time.play();
         audio.sfxPlayAudio();
 
+    }
+
+    private void victory() {
+        //Here we need to end the game with maybe a victory screen or just use gameover
     }
 
     /**
@@ -125,7 +133,7 @@ public class SpaceController {
 
     public void initialize(){
         fxLeikbord.setSc(this);
-        new Wave_Boss(fxLeikbord);
+        new Wave_1(fxLeikbord);
 
 
         /*playArea.addEventHandler(KeyEvent.KEY_PRESSED, event -> {
@@ -152,6 +160,7 @@ public class SpaceController {
                 playerLife--;
             }
         }
+
 
         for (ImageView laser : lasersToRemove) {
             fxLeikbord.removeEnemyLaser(laser);
@@ -203,7 +212,8 @@ public class SpaceController {
                 fxLeikbord.getBoss().decreaseLife();
                 System.out.println("Boss Health: "+ fxLeikbord.getBoss().getBossLife());
                 if (fxLeikbord.getBoss().getBossLife() <= 0) {
-
+                    fxLeikbord.getChildren().remove(fxLeikbord.getBoss());
+                    victory();
                 }
             }
         }

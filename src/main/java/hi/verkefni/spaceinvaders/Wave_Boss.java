@@ -22,7 +22,7 @@ public class Wave_Boss {
         Timeline entering = new Timeline(new KeyFrame(Duration.millis(160), e -> {
             boss.setTranslateY(boss.getTranslateY() + 5);
         }));
-        entering.setCycleCount(60);
+        entering.setCycleCount(40);
         entering.play();
 
         TranslateTransition tt = new TranslateTransition(Duration.seconds(3), boss);
@@ -38,18 +38,22 @@ public class Wave_Boss {
         Random random = new Random();
 
         Timeline phase1 = new Timeline(new KeyFrame(Duration.seconds(4), e -> {
-            int rndmnumber = random.nextInt(2);
+
+            int rndmnumber = random.nextInt(3);
             System.out.println(rndmnumber);
+
             if (rndmnumber == 1) {
                 tt.pause();
                 Tripleshot.play();
-                Tripleshot.setOnFinished(e2 -> {
-                    tt.play();
-                });
+                Tripleshot.setOnFinished(e2 -> tt.play());
+
+            } else if (rndmnumber == 2){
+                boss.BigShoot(leikbord);
 
             } else {
-                //Tripleshot.play();
-                boss.BigShoot(leikbord);
+                tt.pause();
+                boss.ChargeAttack(leikbord, tt);
+
             }
         }));
         phase1.setCycleCount(Timeline.INDEFINITE);
