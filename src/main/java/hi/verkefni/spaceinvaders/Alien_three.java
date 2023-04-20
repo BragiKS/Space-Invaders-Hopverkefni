@@ -7,7 +7,7 @@ import javafx.scene.image.ImageView;
 import javafx.util.Duration;
 
 public class Alien_three extends ImageView {
-    private int bossLife = 3500;
+    private int bossLife = 2250;
     public Alien_three() {
         FXML_Lestur.lesa(this, "alien3-view.fxml");
     }
@@ -83,5 +83,30 @@ public class Alien_three extends ImageView {
         chargeTimeline.setCycleCount(140);
         chargeTimeline.play();
         chargeTimeline.setOnFinished(e -> tt.play());
+    }
+
+    public void ConeSpray(Leikbord leikbord, double deg) {
+        if (bossLife > 0) {
+            Alienshot shot = new Alienshot();
+            leikbord.getEnemyLasers().add(shot);
+            shot.setTranslateX(getTranslateX() + getFitWidth()/4);
+            shot.setTranslateY(getTranslateY() + 30);
+            shot.setRotate(deg);
+            leikbord.getChildren().add(shot);
+
+            Timeline shotTimeline = new Timeline(new KeyFrame(Duration.millis(25), e -> {
+
+                shot.setTranslateX(shot.getTranslateX() + deg/2);
+                shot.setTranslateY(shot.getTranslateY() + 5);
+
+                if (shot.getTranslateY() > 600) {
+                    leikbord.getChildren().remove(shot);
+                    leikbord.getEnemyLasers().remove(shot);
+                }
+            }));
+
+            shotTimeline.setCycleCount(Timeline.INDEFINITE);
+            shotTimeline.play();
+        }
     }
 }

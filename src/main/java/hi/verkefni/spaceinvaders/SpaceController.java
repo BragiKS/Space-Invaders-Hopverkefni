@@ -33,15 +33,16 @@ public class SpaceController {
     private Label fxStig;
     private boolean canShoot = true;
 
-    private int Wavecounter = 1;
+    private boolean canBeHit = true;
 
-    private double shootCooldown = 0.2; // Cooldown duration in seconds //set it to 0.5
+    private int Wavecounter = 4; // Set to 1
+
+    private final double shootCooldown = 0.2; // Cooldown duration in seconds //set it to 0.5
+
+    private final double shieldTime = 3;
 
     private int playerLife = 200;
 
-    private static final double SPEED = 5.0;
-
-    private Timeline t; // tímalínan
     Leikur leikur;
 
 
@@ -120,29 +121,11 @@ public class SpaceController {
                 });
     }
 
-    /**
-     * Stillir upp nýjum leik og byrjar hann
-     */
-    public void nyrLeikur() {
-        leikur.nyrLeikur();
-        fxLeikbord.nyrLeikur();
-        t.play();
-    }
-
-
 
     public void initialize(){
         fxLeikbord.setSc(this);
-        new Wave_1(fxLeikbord);
+        new Wave_Boss(fxLeikbord);
 
-
-        /*playArea.addEventHandler(KeyEvent.KEY_PRESSED, event -> {
-            if (event.getCode() == KeyCode.LEFT) {
-                fxSpaceShip.setX(fxSpaceShip.getX() - SPEED);
-            } else if (event.getCode() == KeyCode.RIGHT) {
-                fxSpaceShip.setX(fxSpaceShip.getX() + SPEED);
-            }
-        });*/
 
         leikur = new Leikur();      // búa til vinnsluna
         fxStig.textProperty().bind(leikur.stiginProperty().asString()); // binda stigin við viðmótið
@@ -152,20 +135,40 @@ public class SpaceController {
 
     public void playerCollision() {
         List<ImageView> lasersToRemove = new ArrayList<>();
+        if (canBeHit) {
+            for (ImageView laser : fxLeikbord.getEnemyLasers()) {
+                if (laser.getBoundsInParent().intersects(fxLeikbord.getFxSpaceShip().getBoundsInParent())) {
 
-        for (ImageView laser : fxLeikbord.getEnemyLasers()) {
-            if (laser.getBoundsInParent().intersects(fxLeikbord.getFxSpaceShip().getBoundsInParent())) {
+                    lasersToRemove.add(laser);
+                    playerLife--;
+                    System.out.println("Player lives: "+playerLife);
 
-                lasersToRemove.add(laser);
-                playerLife--;
+                    canBeHit = false;
+                    PauseTransition cooldownTimer = new PauseTransition(Duration.seconds(shieldTime));
+                    cooldownTimer.setOnFinished(e -> canBeHit = true);
+                    cooldownTimer.play();
+
+                }
+            }
+
+            if (Wavecounter == 4) {
+                if (fxLeikbord.getBoss().getBoundsInParent().intersects(fxLeikbord.getFxSpaceShip().getBoundsInParent())) {
+
+                    playerLife--;
+                    System.out.println("Player lives: "+playerLife);
+
+                    canBeHit = false;
+                    PauseTransition cooldownTimer = new PauseTransition(Duration.seconds(shieldTime));
+                    cooldownTimer.setOnFinished(e -> canBeHit = true);
+                    cooldownTimer.play();
+                }
+            }
+
+            for (ImageView laser : lasersToRemove) {
+                fxLeikbord.removeEnemyLaser(laser);
             }
         }
-
-
-        for (ImageView laser : lasersToRemove) {
-            fxLeikbord.removeEnemyLaser(laser);
         }
-    }
 
     public void checkCollisions() {
         // Create a list to hold enemies and lasers to remove after the loop
