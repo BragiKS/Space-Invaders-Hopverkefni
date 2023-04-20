@@ -60,6 +60,11 @@ public class Wave_Boss {
 
         //Battle Timeline with different phases depending on boss health remaining
         Timeline battle = new Timeline(new KeyFrame(Duration.seconds(4), e -> {
+            if (boss.getBossLife() <= 0) {
+                tt.stop();
+                boss.bossDeathAnimation(leikbord);
+            }
+
 
             //Phase 1
             if (boss.getBossLife() > 1500) {
@@ -127,6 +132,7 @@ public class Wave_Boss {
         entering.setOnFinished(e -> {
             tt.play();
             battle.play();
+
         });
 
     }

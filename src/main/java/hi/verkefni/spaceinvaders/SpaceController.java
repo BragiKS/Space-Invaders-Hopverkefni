@@ -37,7 +37,7 @@ public class SpaceController {
 
     private int Wavecounter = 4; // Set to 1
 
-    private final double shootCooldown = 0.2; // Cooldown duration in seconds //set it to 0.5
+    private final double shootCooldown = 0.001; // Cooldown duration in seconds //set it to 0.5
 
     private final double shieldTime = 3;
 
@@ -78,6 +78,7 @@ public class SpaceController {
                         Wavecounter++;
                         //Boss music maybe?
                     }
+
                 });
         time = new Timeline(k);
         time.setCycleCount(Timeline.INDEFINITE);

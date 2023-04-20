@@ -5,6 +5,10 @@ import javafx.animation.Timeline;
 import javafx.animation.TranslateTransition;
 import javafx.scene.image.ImageView;
 import javafx.util.Duration;
+import javafx.animation.ParallelTransition;
+import javafx.animation.RotateTransition;
+import javafx.animation.ScaleTransition;
+import javafx.animation.SequentialTransition;
 
 public class Alien_three extends ImageView {
     private int bossLife = 2250;
@@ -109,4 +113,36 @@ public class Alien_three extends ImageView {
             shotTimeline.play();
         }
     }
+
+    public void bossDeathAnimation(Leikbord leikbord) {
+        // Create a scaling animation that makes the boss grow and shrink
+        ScaleTransition scaleTransition = new ScaleTransition(Duration.millis(500), this);
+        scaleTransition.setByX(1.5);
+        scaleTransition.setByY(1.5);
+        scaleTransition.setAutoReverse(true);
+        scaleTransition.setCycleCount(2);
+
+        // Create a rotation animation that spins the boss around
+        RotateTransition rotateTransition = new RotateTransition(Duration.millis(1000), this);
+        rotateTransition.setByAngle(720);
+        rotateTransition.setCycleCount(1);
+
+        // Create a parallel transition to run the scaling and rotation animations together
+        ParallelTransition parallelTransition = new ParallelTransition(scaleTransition, rotateTransition);
+
+        // Create a transition that moves the boss up and out of the screen
+        TranslateTransition moveUpTransition = new TranslateTransition(Duration.millis(1000), this);
+        moveUpTransition.setByY(-leikbord.getHeight());
+        moveUpTransition.setCycleCount(1);
+
+        // Create a sequential transition to run the parallel transition followed by the move up transition
+        SequentialTransition sequentialTransition = new SequentialTransition(parallelTransition, moveUpTransition);
+
+        // Set an action to remove the boss from the game board after the animation is done
+        sequentialTransition.setOnFinished(e -> leikbord.getChildren().remove(this));
+
+        // Play the animation
+        sequentialTransition.play();
+    }
+
 }
