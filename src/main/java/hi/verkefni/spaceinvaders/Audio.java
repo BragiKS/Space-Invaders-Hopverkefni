@@ -75,7 +75,7 @@ public class Audio {
 
     public void gameOverAudio() {
         try {
-            String path = "/game-over.mp3";
+            String path = "/game-over.wav";
             Media audioFile = new Media(getClass().getResource(path).toExternalForm());
             mp = new MediaPlayer(audioFile);
             mp.play();

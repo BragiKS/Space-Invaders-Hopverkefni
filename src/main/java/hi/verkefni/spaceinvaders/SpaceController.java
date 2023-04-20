@@ -33,15 +33,16 @@ public class SpaceController {
     private Label fxStig;
     private boolean canShoot = true;
 
-    private int Wavecounter = 1;
+    private boolean canBeHit = true;
 
-    private double shootCooldown = 0.2; // Cooldown duration in seconds //set it to 0.5
+    private int Wavecounter = 4; // Set to 1
 
-    private int playerLife = 1;
+    private final double shootCooldown = 0.2; // Cooldown duration in seconds //set it to 0.5
 
-    private static final double SPEED = 5.0;
+    private final double shieldTime = 3;
 
-    private Timeline t; // tímalínan
+    private int playerLife = 200;
+
     Leikur leikur;
 
 
@@ -55,9 +56,11 @@ public class SpaceController {
                 e -> {
                     checkCollisions();
                     playerCollision();
+                    if (Wavecounter == 4) {
+                        bossCollision();
+                    }
                     if (playerLife == 0) {
                         //GAMEOVER!
-                        System.out.println("DEADEDEAD");
                         ViewSwitcher.switchTo(View.OVER);
                         time.stop();
                     }
@@ -70,12 +73,21 @@ public class SpaceController {
                         new Wave_3(fxLeikbord);
                         Wavecounter++;
                     }
+                    if (fxLeikbord.allEnemiesDestroyed() && Wavecounter == 3) {
+                        new Wave_Boss(fxLeikbord);
+                        Wavecounter++;
+                        //Boss music maybe?
+                    }
                 });
         time = new Timeline(k);
         time.setCycleCount(Timeline.INDEFINITE);
         time.play();
         audio.sfxPlayAudio();
 
+    }
+
+    private void victory() {
+        //Here we need to end the game with maybe a victory screen or just use gameover
     }
 
     /**
@@ -108,29 +120,11 @@ public class SpaceController {
                 });
     }
 
-    /**
-     * Stillir upp nýjum leik og byrjar hann
-     */
-    public void nyrLeikur() {
-        leikur.nyrLeikur();
-        fxLeikbord.nyrLeikur();
-        t.play();
-    }
-
-
 
     public void initialize(){
         fxLeikbord.setSc(this);
-        new Wave_3(fxLeikbord);
+        new Wave_Boss(fxLeikbord);
 
-
-        /*playArea.addEventHandler(KeyEvent.KEY_PRESSED, event -> {
-            if (event.getCode() == KeyCode.LEFT) {
-                fxSpaceShip.setX(fxSpaceShip.getX() - SPEED);
-            } else if (event.getCode() == KeyCode.RIGHT) {
-                fxSpaceShip.setX(fxSpaceShip.getX() + SPEED);
-            }
-        });*/
 
         leikur = new Leikur();      // búa til vinnsluna
         fxStig.textProperty().bind(leikur.stiginProperty().asString()); // binda stigin við viðmótið
@@ -141,18 +135,42 @@ public class SpaceController {
     public void playerCollision() {
         List<ImageView> lasersToRemove = new ArrayList<>();
 
-        for (ImageView laser : fxLeikbord.getEnemyLasers()) {
-            if (laser.getBoundsInParent().intersects(fxLeikbord.getFxSpaceShip().getBoundsInParent())) {
+        //Checks if player has been hit recently and if an enemy hits the player lives go down.
+        if (canBeHit) {
+            for (ImageView laser : fxLeikbord.getEnemyLasers()) {
+                if (laser.getBoundsInParent().intersects(fxLeikbord.getFxSpaceShip().getBoundsInParent())) {
 
-                lasersToRemove.add(laser);
-                playerLife--;
+                    lasersToRemove.add(laser);
+                    playerLife--;
+                    System.out.println("Player lives: "+playerLife);
+
+                    canBeHit = false;
+                    PauseTransition cooldownTimer = new PauseTransition(Duration.seconds(shieldTime));
+                    cooldownTimer.setOnFinished(e -> canBeHit = true);
+                    cooldownTimer.play();
+
+                }
+            }
+
+            //This is to check if the charge attack in the boss fight hits the player.
+            if (Wavecounter == 4) {
+                if (fxLeikbord.getBoss().getBoundsInParent().intersects(fxLeikbord.getFxSpaceShip().getBoundsInParent())) {
+
+                    playerLife--;
+                    System.out.println("Player lives: "+playerLife);
+
+                    canBeHit = false;
+                    PauseTransition cooldownTimer = new PauseTransition(Duration.seconds(shieldTime));
+                    cooldownTimer.setOnFinished(e -> canBeHit = true);
+                    cooldownTimer.play();
+                }
+            }
+
+            for (ImageView laser : lasersToRemove) {
+                fxLeikbord.removeEnemyLaser(laser);
             }
         }
-
-        for (ImageView laser : lasersToRemove) {
-            fxLeikbord.removeEnemyLaser(laser);
         }
-    }
 
     public void checkCollisions() {
         // Create a list to hold enemies and lasers to remove after the loop
@@ -187,5 +205,27 @@ public class SpaceController {
         for (ImageView laser : lasersToRemove) {
             fxLeikbord.removeLaser(laser);
         }
+    }
+
+    public void bossCollision() {
+        List<ImageView> lasersToRemove = new ArrayList<>();
+
+        for (ImageView laser : fxLeikbord.getLasers()) {
+            if (laser.getBoundsInParent().intersects(fxLeikbord.getBoss().getBoundsInParent())) {
+
+                lasersToRemove.add(laser);
+                fxLeikbord.getBoss().decreaseLife();
+                System.out.println("Boss Health: "+ fxLeikbord.getBoss().getBossLife());
+                if (fxLeikbord.getBoss().getBossLife() <= 0) {
+                    fxLeikbord.getChildren().remove(fxLeikbord.getBoss());
+                    victory();
+                }
+            }
+        }
+
+        for (ImageView laser : lasersToRemove) {
+            fxLeikbord.removeEnemyLaser(laser);
+        }
+
     }
 }
