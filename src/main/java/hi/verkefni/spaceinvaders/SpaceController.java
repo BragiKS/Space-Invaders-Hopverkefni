@@ -114,6 +114,7 @@ public class SpaceController {
     private void victory() {
         //Here we need to end the game with maybe a victory screen or just use gameover
         audio.stop();
+        audio.victorySound();
         ViewSwitcher.switchTo(View.VICTORY);
 
     }
@@ -168,6 +169,8 @@ public class SpaceController {
             for (ImageView laser : fxLeikbord.getEnemyLasers()) {
                 if (laser.getBoundsInParent().intersects(fxLeikbord.getFxSpaceShip().getBoundsInParent())) {
 
+                    fxLeikbord.getFxSpaceShip().HitAnimation();
+
                     lasersToRemove.add(laser);
                     playerLife--;
                     System.out.println("Player lives: "+playerLife);
@@ -183,6 +186,8 @@ public class SpaceController {
             //This is to check if the charge attack in the boss fight hits the player.
             if (Wavecounter == 5) {
                 if (fxLeikbord.getBoss().getBoundsInParent().intersects(fxLeikbord.getFxSpaceShip().getBoundsInParent())) {
+
+                    fxLeikbord.getFxSpaceShip().HitAnimation();
 
                     playerLife--;
                     System.out.println("Player lives: "+playerLife);
