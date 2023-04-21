@@ -52,7 +52,7 @@ public class SpaceController {
     }
 
     public void startGame() {
-        lifeCounter = new Heart(fxLeikbord);
+
         KeyFrame k = new KeyFrame(Duration.millis(10),
                 e -> {
                     checkCollisions();
@@ -60,14 +60,7 @@ public class SpaceController {
                     if (Wavecounter == 5 && !bossDead) {
                         bossCollision();
                     }
-                    if(playerLife == 2) {
-                        fxLeikbord.removeHeartThree();
-                    }
-
-                    if(playerLife == 1) {
-                        fxLeikbord.removeHeartTwo();
-                    }
-                    if (playerLife == 0) {
+                    else if (playerLife == 0) {
                         //GAMEOVER!
                         ViewSwitcher.switchTo(View.OVER);
                         GameOverController gc = (GameOverController) ViewSwitcher.lookup(View.OVER);
@@ -87,6 +80,7 @@ public class SpaceController {
                         }
                         time.stop();
                     }
+
                     if (fxLeikbord.allEnemiesDestroyed() && Wavecounter == 1) {
 
                         wave1 = new Wave_1(fxLeikbord);
@@ -175,6 +169,7 @@ public class SpaceController {
 
                     lasersToRemove.add(laser);
                     playerLife--;
+                    lifeCounter.removeHeart(fxLeikbord);
                     System.out.println("Player lives: "+playerLife);
 
                     canBeHit = false;
@@ -192,6 +187,7 @@ public class SpaceController {
                     fxLeikbord.getFxSpaceShip().HitAnimation();
 
                     playerLife--;
+                    lifeCounter.removeHeart(fxLeikbord);
                     System.out.println("Player lives: "+playerLife);
 
                     canBeHit = false;
@@ -285,6 +281,7 @@ public class SpaceController {
         playerLife = 3;
         bossDead = false;
         Wavecounter = 1;
+        lifeCounter.addHearts();
         leikur.nyrLeikur();
         audio.sfxPlayAudio();
         ViewSwitcher.switchTo(View.SHOOTING);
@@ -295,13 +292,11 @@ public class SpaceController {
     public void initialize(){
         fxLeikbord.setSc(this);
 
-
+        lifeCounter = new Heart(fxLeikbord);
         leikur = new Leikur();      // búa til vinnsluna
         fxStig.textProperty().bind(leikur.stiginProperty().asString()); // binda stigin við viðmótið
         fxStig.setFocusTraversable(false);
         // ekki hægt að focus-a á stigin
 
-
-        lifeCounter = new Heart(fxLeikbord);
     }
 }
