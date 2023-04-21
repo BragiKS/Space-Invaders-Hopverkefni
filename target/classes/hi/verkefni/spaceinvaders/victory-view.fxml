@@ -2,7 +2,10 @@
 
 <?import java.net.URL?>
 <?import javafx.scene.control.Button?>
+<<<<<<< HEAD
 <?import javafx.scene.image.Image?>
+=======
+>>>>>>> 5b83d2d5d722116d22f83178b1b2b067964e6b2a
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
@@ -12,14 +15,23 @@
         <URL value="@styles.css" />
     </stylesheets>
     <children>
+<<<<<<< HEAD
         <ImageView fitHeight="610.0" fitWidth="607.0" layoutX="-6.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@img/victory.jpg" />
          </image></ImageView>
         <Button fx:id="playagain" layoutX="166.0" layoutY="500.0" mnemonicParsing="false" onMouseClicked="#playagain" prefHeight="25.0" prefWidth="270.0" style="-fx-background-color: #fcda00;" stylesheets="@styles.css" text="Play Again?" textAlignment="CENTER">
+=======
+        <ImageView fitHeight="600.0" fitWidth="600.0" layoutX="1.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true" />
+        <Button fx:id="playagain" layoutX="166.0" layoutY="500.0" mnemonicParsing="false" onAction="#playagain" prefHeight="25.0" prefWidth="270.0" style="-fx-background-color: #fcda00;" stylesheets="@styles.css" text="Play Again?" textAlignment="CENTER">
+>>>>>>> 5b83d2d5d722116d22f83178b1b2b067964e6b2a
             <font>
                 <Font name="Yu Gothic Light" size="26.0" />
             </font>
         </Button>
     </children>
+<<<<<<< HEAD
 </Pane>
+=======
+</Pane>
+>>>>>>> 5b83d2d5d722116d22f83178b1b2b067964e6b2a
