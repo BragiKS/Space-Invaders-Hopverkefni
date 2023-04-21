@@ -2,7 +2,6 @@ package hi.verkefni.spaceinvaders;
 
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
-import javafx.animation.Transition;
 import javafx.animation.TranslateTransition;
 import javafx.util.Duration;
 
@@ -10,8 +9,9 @@ import java.util.Random;
 
 public class Wave_Boss {
 
-    private double degreeForCone = 0;
-    private double counterForCone = 0;
+    private double degreeForCone;
+    private Random spreadDegree;
+    private Timeline battle;
     public Wave_Boss(Leikbord leikbord) {
 
         Alien_three boss = new Alien_three();
@@ -29,11 +29,16 @@ public class Wave_Boss {
         entering.setCycleCount(40);
         entering.play();
 
+        //Boss move left after entering is finished
+        TranslateTransition ttEntering = new TranslateTransition(Duration.seconds(3), boss);
+        ttEntering.setCycleCount(1);
+        ttEntering.setByX(-200);
+
         //Boss movement back and forth
-        TranslateTransition tt = new TranslateTransition(Duration.seconds(3), boss);
+        TranslateTransition tt = new TranslateTransition(Duration.seconds(6), boss);
         tt.setAutoReverse(true);
         tt.setCycleCount(Timeline.INDEFINITE);
-        tt.setByX(200);
+        tt.setByX(400);
 
         //Triple fire attack pattern
         Timeline Tripleshot = new Timeline(new KeyFrame(Duration.millis(100), e -> {
@@ -42,29 +47,19 @@ public class Wave_Boss {
         Tripleshot.setCycleCount(20);
 
         //Cone fire attack pattern
+        spreadDegree = new Random();
         Timeline Coneshot = new Timeline(new KeyFrame(Duration.millis(100), e -> {
+
+            degreeForCone = spreadDegree.nextDouble(-10, 10);
             boss.ConeSpray(leikbord, degreeForCone);
 
-            if (counterForCone > 5 && counterForCone <= 10) {
-                degreeForCone--;
-            } else if (counterForCone > 15) {
-                degreeForCone--;
-            } else {
-                degreeForCone++;
-            }
-            counterForCone++;
         }));
-        Coneshot.setCycleCount(20);
+        Coneshot.setCycleCount(30);
 
         Random random = new Random();
 
         //Battle Timeline with different phases depending on boss health remaining
-        Timeline battle = new Timeline(new KeyFrame(Duration.seconds(4), e -> {
-            if (boss.getBossLife() <= 0) {
-                tt.stop();
-                boss.bossDeathAnimation(leikbord);
-            }
-
+        battle = new Timeline(new KeyFrame(Duration.seconds(4), e -> {
 
             //Phase 1
             if (boss.getBossLife() > 1500) {
@@ -119,8 +114,6 @@ public class Wave_Boss {
                     tt.pause();
                     Coneshot.play();
                     Coneshot.setOnFinished(e2 -> {
-                        degreeForCone = 0;
-                        counterForCone = 0;
                         tt.play();
                     });
                 }
@@ -130,10 +123,16 @@ public class Wave_Boss {
 
         //When boss is done entering it starts battle, back and forth movement
         entering.setOnFinished(e -> {
-            tt.play();
+            ttEntering.play();
             battle.play();
-
+        });
+        ttEntering.setOnFinished(e -> {
+            tt.play();
         });
 
+    }
+
+    public void stop() {
+        battle.stop();
     }
 }

@@ -7,6 +7,7 @@ import javafx.util.Duration;
 
 public class Wave_3 {
     private int shootingtimer = 0;
+    private Timeline shootingTimeline;
 
     public Wave_3(Leikbord leikbord) {
         // Aliens and shooters initialization
@@ -53,7 +54,7 @@ public class Wave_3 {
         alienTimeline.setCycleCount(70);
         alienTimeline.play();
 
-        Timeline shootingTimeline = new Timeline(new KeyFrame(Duration.seconds(2), e -> {
+        shootingTimeline = new Timeline(new KeyFrame(Duration.seconds(2), e -> {
             shootingtimer++;
             if (shootingtimer > 1) {
                 for (Alien_two shooter : shooters) {
@@ -86,5 +87,9 @@ public class Wave_3 {
         ttBoss.setCycleCount(TranslateTransition.INDEFINITE);
         ttBoss.setByX(200);
         ttBoss.play();
+    }
+
+    public void stop() {
+        shootingTimeline.stop();
     }
 }

@@ -11,7 +11,7 @@ import javafx.animation.ScaleTransition;
 import javafx.animation.SequentialTransition;
 
 public class Alien_three extends ImageView {
-    private int bossLife = 2250;
+    private int bossLife = 2250; //Set to 2250
     public Alien_three() {
         FXML_Lestur.lesa(this, "alien3-view.fxml");
     }
@@ -28,8 +28,8 @@ public class Alien_three extends ImageView {
         if (bossLife > 0) {
             Bigshot shot = new Bigshot();
             leikbord.getEnemyLasers().add(shot);
-            shot.setTranslateX(getTranslateX() + getFitWidth()/4);
-            shot.setTranslateY(getTranslateY() + 30);
+            shot.setTranslateX(getTranslateX() + getFitWidth()/2);
+            shot.setTranslateY(getTranslateY() + 50);
             leikbord.getChildren().add(shot);
             Timeline shotTimeline = new Timeline(new KeyFrame(Duration.millis(10), e -> {
                 shot.setTranslateY(shot.getTranslateY() + 5);
@@ -52,8 +52,8 @@ public class Alien_three extends ImageView {
                 shots[i] = new Alienshot();
                 shots[i].setRotate(25*(1 - i));
                 leikbord.getEnemyLasers().add(shots[i]);
-                shots[i].setTranslateX(getTranslateX() + 10 + (i*20));
-                shots[i].setTranslateY(getTranslateY());
+                shots[i].setTranslateX(getTranslateX() + getFitWidth()/2 + 10 * (i-1));
+                shots[i].setTranslateY(getTranslateY()+ 70);
                 leikbord.getChildren().add(shots[i]);
             }
 
@@ -93,9 +93,9 @@ public class Alien_three extends ImageView {
         if (bossLife > 0) {
             Alienshot shot = new Alienshot();
             leikbord.getEnemyLasers().add(shot);
-            shot.setTranslateX(getTranslateX() + getFitWidth()/4);
-            shot.setTranslateY(getTranslateY() + 30);
-            shot.setRotate(deg);
+            shot.setTranslateX(getTranslateX() + getFitWidth()/2);
+            shot.setTranslateY(getTranslateY() + 70);
+            shot.setRotate(-deg);
             leikbord.getChildren().add(shot);
 
             Timeline shotTimeline = new Timeline(new KeyFrame(Duration.millis(25), e -> {

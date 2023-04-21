@@ -44,6 +44,7 @@ public class Audio {
             String path = "/shoot.wav";
             Media audioFile = new Media(getClass().getResource(path).toExternalForm());
             mp = new MediaPlayer(audioFile);
+            mp.setVolume(0.1);
             mp.play();
         } catch(Exception e) {
             e.printStackTrace();
@@ -66,6 +67,34 @@ public class Audio {
             String path = "/invaderkilled.wav";
             Media audioFile = new Media(getClass().getResource(path).toExternalForm());
             mp = new MediaPlayer(audioFile);
+            mp.setVolume(0.2);
+            mp.play();
+        } catch(Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void bossSound() {
+        try {
+            String path = "/Boss.mp3";
+            Media audioFile = new Media(getClass().getResource(path).toExternalForm());
+            mp = new MediaPlayer(audioFile);
+            mp.play();
+        } catch(Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void stop() {
+        mp.stop();
+    }
+
+    public void victorySound() {
+        try {
+            String path = "/Victory.mp3";
+            Media audioFile = new Media(getClass().getResource(path).toExternalForm());
+            mp = new MediaPlayer(audioFile);
+            mp.setVolume(0.3);
             mp.play();
         } catch(Exception e) {
             e.printStackTrace();
