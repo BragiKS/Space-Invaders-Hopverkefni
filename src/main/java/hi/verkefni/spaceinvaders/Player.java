@@ -20,6 +20,7 @@ public class Player extends ImageView {
     private Shot fxShot;
 
     private Audio audio = new Audio();
+    private int dissappearCounter = 0;
 
     public Player() {
         FXML_Lestur.lesa(this, "player-view.fxml");
@@ -31,12 +32,6 @@ public class Player extends ImageView {
     }
 
     private static final double SPEED = 10.0; // Change this value to control the speed of the spaceship
-
-    public Player(String imagePath, double x, double y, double width, double height) {
-        super(new Image(imagePath, width, height, true, true));
-        setX(x);
-        setY(y);
-    }
 
     public void Left() {
         Leikbord parent = (Leikbord) this.getParent();
@@ -76,8 +71,19 @@ public class Player extends ImageView {
         bulletTimeline.setCycleCount(Timeline.INDEFINITE);
         bulletTimeline.play();
 
+    }
 
+    public void HitAnimation() {
 
-
+        Timeline disappearTimeline = new Timeline(new KeyFrame(Duration.seconds(0.25), e -> {
+            if (dissappearCounter % 2 == 0) {
+                setVisible(false);
+            } else {
+                setVisible(true);
+            }
+            dissappearCounter++;
+        }));
+        disappearTimeline.setCycleCount(12);
+        disappearTimeline.play();
     }
 }

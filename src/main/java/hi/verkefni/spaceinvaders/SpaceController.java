@@ -33,7 +33,7 @@ public class SpaceController {
 
     private boolean canBeHit = true;
 
-    private int Wavecounter = 1; // Set to 1
+    private int Wavecounter = 4; // Set to 1
 
     private final double shootCooldown = 0.2; // Cooldown duration in seconds //set it to 0.5
 
@@ -70,6 +70,8 @@ public class SpaceController {
                     if (playerLife == 0) {
                         //GAMEOVER!
                         ViewSwitcher.switchTo(View.OVER);
+                        audio.stop();
+                        audio.gameOverAudio();
                         switch (Wavecounter) {
                             case 3:
                                 wave2.stop();
@@ -98,10 +100,11 @@ public class SpaceController {
                         Wavecounter++;
                     }
                     if (fxLeikbord.allEnemiesDestroyed() && Wavecounter == 4) {
-                        wave3.stop();
+                        //wave3.stop();
+                        audio.stop();
+                        audio.bossSound();
                         bosswave = new Wave_Boss(fxLeikbord);
                         Wavecounter++;
-                        //Boss music maybe?
                     }
                 });
         time = new Timeline(k);
@@ -113,6 +116,10 @@ public class SpaceController {
 
     private void victory() {
         //Here we need to end the game with maybe a victory screen or just use gameover
+        audio.stop();
+        audio.victorySound();
+        ViewSwitcher.switchTo(View.VICTORY);
+
     }
 
     /**
@@ -163,6 +170,8 @@ public class SpaceController {
             for (ImageView laser : fxLeikbord.getEnemyLasers()) {
                 if (laser.getBoundsInParent().intersects(fxLeikbord.getFxSpaceShip().getBoundsInParent())) {
 
+                    fxLeikbord.getFxSpaceShip().HitAnimation();
+
                     lasersToRemove.add(laser);
                     playerLife--;
                     System.out.println("Player lives: "+playerLife);
@@ -178,6 +187,8 @@ public class SpaceController {
             //This is to check if the charge attack in the boss fight hits the player.
             if (Wavecounter == 5) {
                 if (fxLeikbord.getBoss().getBoundsInParent().intersects(fxLeikbord.getFxSpaceShip().getBoundsInParent())) {
+
+                    fxLeikbord.getFxSpaceShip().HitAnimation();
 
                     playerLife--;
                     System.out.println("Player lives: "+playerLife);
@@ -272,6 +283,7 @@ public class SpaceController {
         playerLife = 3;
         Wavecounter = 1;
         leikur.nyrLeikur();
+        audio.sfxPlayAudio();
         ViewSwitcher.switchTo(View.SHOOTING);
         time.play();
         lifeCounter = new Heart(fxLeikbord);

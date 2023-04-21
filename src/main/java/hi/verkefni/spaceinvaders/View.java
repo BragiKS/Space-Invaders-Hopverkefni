@@ -6,7 +6,8 @@ package hi.verkefni.spaceinvaders;
 public enum View {
     LEIKBORD("leikbord-view.fxml"),
     SHOOTING("space-view.fxml"),
-    OVER("gameover.fxml");
+    OVER("gameover.fxml"),
+    VICTORY("victory-view.fxml");
 
 
     private final String fileName;

@@ -21,7 +21,11 @@ public class Leikur {
 
 
     public void haekkaStigin() {
-        stigin.setValue(stigin.getValue()+50);
+        stigin.setValue(stigin.getValue()+20);
+    }
+
+    public void bossKilled() {
+        stigin.setValue(stigin.getValue() + 200);
     }
 
     public void nyrLeikur() {

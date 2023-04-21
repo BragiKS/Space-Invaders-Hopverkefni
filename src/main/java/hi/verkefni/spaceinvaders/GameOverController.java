@@ -1,10 +1,10 @@
 package hi.verkefni.spaceinvaders;
 
-import javafx.event.ActionEvent;
+import javafx.scene.input.MouseEvent;
 
 public class GameOverController {
 
-    public void playagain(ActionEvent actionEvent) {
+    public void playagain(MouseEvent actionEvent) {
         SpaceController sc = (SpaceController) ViewSwitcher.lookup(View.SHOOTING);
         sc.newgame();
     }
