@@ -46,7 +46,7 @@ public class SpaceController {
 
     private final double shieldTime = 3;
 
-    private int playerLife = 4;
+    private int playerLife = 1;
 
     Leikur leikur;
 
@@ -124,7 +124,8 @@ public class SpaceController {
                             fxLeikbord.getFxSpaceShip().Left();
                         } else if (event.getCode() == KeyCode.RIGHT) {
                             fxLeikbord.getFxSpaceShip().Right();
-                        } else if (event.getCode() == KeyCode.SPACE) {
+                        }
+                        if (event.getCode() == KeyCode.SPACE) {
                             if (canShoot) {
 
                                 fxLeikbord.getFxSpaceShip().Shoot(fxLeikbord);
@@ -256,9 +257,13 @@ public class SpaceController {
         if (Wavecounter == 5) {
             fxLeikbord.getChildren().remove(fxLeikbord.getBoss());
         } else if (!fxLeikbord.allEnemiesDestroyed()) {
+            List<ImageView> enemiesToRemove = new ArrayList<>();
+
             for (ImageView enemy : fxLeikbord.getEnemies()) {
-                fxLeikbord.getEnemies().remove(enemy);
-                fxLeikbord.getChildren().remove(enemy);
+                enemiesToRemove.add(enemy);
+            }
+            for (ImageView enemyToremove : enemiesToRemove) {
+                fxLeikbord.removeEnemy(enemyToremove);
             }
         }
 
