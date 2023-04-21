@@ -1,7 +1,6 @@
 package hi.verkefni.spaceinvaders;
 
 import javafx.application.Application;
-import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
@@ -12,7 +11,6 @@ public class SpaceApplication extends Application {
     //Fastar
 
     //Myndir
-
 
     @Override
     public void start(Stage stage) throws IOException {
