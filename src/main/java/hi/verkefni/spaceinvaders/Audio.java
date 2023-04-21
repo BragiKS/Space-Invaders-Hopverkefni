@@ -72,6 +72,17 @@ public class Audio {
         }
     }
 
+    public void bossSound() {
+        try {
+            String path = "/Boss.mp3";
+            Media audioFile = new Media(getClass().getResource(path).toExternalForm());
+            mp = new MediaPlayer(audioFile);
+            mp.play();
+        } catch(Exception e) {
+            e.printStackTrace();
+        }
+    }
+
 
     public void gameOverAudio() {
         try {
