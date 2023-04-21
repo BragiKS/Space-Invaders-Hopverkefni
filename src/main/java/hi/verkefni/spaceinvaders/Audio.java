@@ -89,6 +89,18 @@ public class Audio {
         mp.stop();
     }
 
+    public void victorySound() {
+        try {
+            String path = "/Victory.mp3";
+            Media audioFile = new Media(getClass().getResource(path).toExternalForm());
+            mp = new MediaPlayer(audioFile);
+            mp.setVolume(0.3);
+            mp.play();
+        } catch(Exception e) {
+            e.printStackTrace();
+        }
+    }
+
 
     public void gameOverAudio() {
         try {
