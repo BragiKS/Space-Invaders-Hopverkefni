@@ -3,19 +3,18 @@ package hi.verkefni.spaceinvaders;
 import javafx.scene.image.ImageView;
 
 public class Heart extends ImageView {
+    private Heart one;
+    private Heart two;
+    private Heart three;
+    private int heartCounter = 3;
 
     public Heart() {
         FXML_Lestur.lesa(this, "Heart-view.fxml");
     }
     public Heart(Leikbord leikbord){
-        Heart one = new Heart();
-        Heart two = new Heart();
-        Heart three = new Heart();
-
-        leikbord.setHeartTwo(two);
-        leikbord.setHeartThree(three);
-
-
+        one = new Heart();
+        two = new Heart();
+        three = new Heart();
 
         one.setTranslateX(10);
         one.setTranslateY(10);
@@ -29,5 +28,22 @@ public class Heart extends ImageView {
         three.setTranslateY(10);
         leikbord.getChildren().add(three);
 
+    }
+
+    public void removeHeart(Leikbord leikbord) {
+        if (heartCounter == 3) {
+            leikbord.getChildren().remove(three);
+        } else if (heartCounter == 2) {
+            leikbord.getChildren().remove(two);
+        } else {
+            leikbord.getChildren().remove(one);
+        }
+        heartCounter--;
+    }
+
+    public void addHearts() {
+        three.setVisible(true);
+        two.setVisible(true);
+        one.setVisible(true);
     }
 }

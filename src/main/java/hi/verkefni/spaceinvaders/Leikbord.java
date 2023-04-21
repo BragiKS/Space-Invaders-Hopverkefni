@@ -70,29 +70,12 @@ public class Leikbord extends AnchorPane {
         this.boss = boss;
     }
 
-    public void setHeartThree(Heart three) {
-        this.three = three;
-    }
-
-    public void setHeartTwo(Heart two) {
-        this.two = two;
-    }
-
     public List<ImageView> getLasers() {
         return lasers;
     }
 
     public List<ImageView> getEnemyLasers() {
         return enemylasers;
-    }
-
-
-    public void removeHeartThree() {
-        getChildren().remove(three);
-    }
-
-    public void removeHeartTwo(){
-        getChildren().remove(two);
     }
 
     public void removeEnemy(ImageView enemy) {
