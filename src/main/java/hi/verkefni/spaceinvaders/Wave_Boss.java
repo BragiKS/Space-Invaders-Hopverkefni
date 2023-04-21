@@ -2,7 +2,6 @@ package hi.verkefni.spaceinvaders;
 
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
-import javafx.animation.Transition;
 import javafx.animation.TranslateTransition;
 import javafx.util.Duration;
 

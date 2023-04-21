@@ -3,23 +3,15 @@ package hi.verkefni.spaceinvaders;
 import javafx.animation.KeyFrame;
 import javafx.animation.PauseTransition;
 import javafx.animation.Timeline;
-import javafx.collections.FXCollections;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.geometry.Bounds;
-import javafx.scene.Scene;
-import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
-import javafx.scene.layout.AnchorPane;
 import javafx.scene.media.MediaView;
 import javafx.util.Duration;
-import hi.verkefni.spaceinvaders.Leikur;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 
 public class SpaceController {
@@ -36,6 +28,7 @@ public class SpaceController {
     private Wave_2 wave2;
     private Wave_3 wave3;
     private Wave_Boss bosswave;
+    private Heart lifeCounter;
     private boolean canShoot = true;
 
     private boolean canBeHit = true;
@@ -59,11 +52,22 @@ public class SpaceController {
     }
 
     public void startGame() {
+        lifeCounter = new Heart(fxLeikbord);
         KeyFrame k = new KeyFrame(Duration.millis(10),
                 e -> {
                     checkCollisions();
                     playerCollision();
                     if (Wavecounter == 5 && !bossDead) {
+
+                    if(playerLife == 2) {
+                        fxLeikbord.removeHeartThree();
+                    }
+
+                    if(playerLife == 1) {
+                        fxLeikbord.removeHeartTwo();
+                    }
+
+                    if (Wavecounter == 5) {
                         bossCollision();
                     }
                     if (playerLife == 0) {
@@ -301,5 +305,6 @@ public class SpaceController {
         // ekki hægt að focus-a á stigin
 
 
+        lifeCounter = new Heart(fxLeikbord);
     }
 }
