@@ -9,10 +9,6 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 public class SpaceApplication extends Application {
-    //Fastar
-
-    //Myndir
-
 
     @Override
     public void start(Stage stage) throws IOException {

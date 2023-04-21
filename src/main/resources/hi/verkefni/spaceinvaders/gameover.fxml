@@ -12,7 +12,7 @@
    </stylesheets>
    <children>
       <ImageView fitHeight="600.0" fitWidth="600.0" layoutX="1.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true" />
-      <Button fx:id="playagain" layoutX="166.0" layoutY="500.0" mnemonicParsing="false" onAction="#playagain" prefHeight="25.0" prefWidth="270.0" style="-fx-background-color: #fcda00;" stylesheets="@styles.css" text="Play Again?" textAlignment="CENTER">
+      <Button fx:id="playagain" layoutX="166.0" layoutY="500.0" mnemonicParsing="false" onMouseClicked="#playagain" prefHeight="25.0" prefWidth="270.0" style="-fx-background-color: #fcda00;" stylesheets="@styles.css" text="Play Again?" textAlignment="CENTER">
          <font>
             <Font name="Yu Gothic Light" size="26.0" />
          </font>

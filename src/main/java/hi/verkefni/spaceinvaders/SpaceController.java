@@ -46,7 +46,7 @@ public class SpaceController {
 
     private final double shieldTime = 3;
 
-    private int playerLife = 1;
+    private int playerLife = 2;
 
     Leikur leikur;
 
@@ -67,6 +67,8 @@ public class SpaceController {
                     if (playerLife == 0) {
                         //GAMEOVER!
                         ViewSwitcher.switchTo(View.OVER);
+                        audio.stop();
+                        audio.gameOverAudio();
                         switch (Wavecounter) {
                             case 3:
                                 wave2.stop();
@@ -96,6 +98,8 @@ public class SpaceController {
                     }
                     if (fxLeikbord.allEnemiesDestroyed() && Wavecounter == 4) {
                         wave3.stop();
+                        audio.stop();
+                        audio.bossSound();
                         bosswave = new Wave_Boss(fxLeikbord);
                         Wavecounter++;
                         //Boss music maybe?
@@ -110,6 +114,9 @@ public class SpaceController {
 
     private void victory() {
         //Here we need to end the game with maybe a victory screen or just use gameover
+        audio.stop();
+        ViewSwitcher.switchTo(View.VICTORY);
+
     }
 
     /**
@@ -271,6 +278,7 @@ public class SpaceController {
         playerLife = 3;
         Wavecounter = 1;
         leikur.nyrLeikur();
+        audio.sfxPlayAudio();
         ViewSwitcher.switchTo(View.SHOOTING);
         time.play();
 
