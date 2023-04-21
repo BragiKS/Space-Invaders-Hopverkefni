@@ -60,7 +60,7 @@ public class SpaceController {
                     if (Wavecounter == 5 && !bossDead) {
                         bossCollision();
                     }
-                    else if (playerLife == 0) {
+                    if (playerLife == 0) {
                         //GAMEOVER!
                         ViewSwitcher.switchTo(View.OVER);
                         GameOverController gc = (GameOverController) ViewSwitcher.lookup(View.OVER);
@@ -76,6 +76,7 @@ public class SpaceController {
                                 break;
                             case 5:
                                 bosswave.stop();
+                                fxLeikbord.getChildren().remove(bosswave.getHealthBar());
                                 break;
                         }
                         time.stop();
@@ -114,6 +115,7 @@ public class SpaceController {
         //Here we need to end the game with maybe a victory screen or just use gameover
 
         leikur.bossKilled();
+        fxLeikbord.getChildren().remove(bosswave.getHealthBar());
 
         audio.stop();
         audio.victorySound();

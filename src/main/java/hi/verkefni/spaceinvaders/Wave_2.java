@@ -54,21 +54,23 @@ public class Wave_2 {
         shootingTimeline.play();
 
         // Translate transitions for aliens and shooters
-        for (int i = 0; i < aliens.length; i++) {
-            TranslateTransition tt = new TranslateTransition(Duration.seconds(4), aliens[i]);
-            tt.setAutoReverse(true);
-            tt.setCycleCount(TranslateTransition.INDEFINITE);
-            tt.setByX(80);
-            tt.play();
-        }
+        alienTimeline.setOnFinished(e -> {
+            for (int i = 0; i < aliens.length; i++) {
+                TranslateTransition tt = new TranslateTransition(Duration.seconds(4), aliens[i]);
+                tt.setAutoReverse(true);
+                tt.setCycleCount(TranslateTransition.INDEFINITE);
+                tt.setByX(80);
+                tt.play();
+            }
 
-        for (int i = 0; i < shooters.length; i++) {
-            TranslateTransition tt = new TranslateTransition(Duration.seconds(4), shooters[i]);
-            tt.setAutoReverse(true);
-            tt.setCycleCount(TranslateTransition.INDEFINITE);
-            tt.setByX(80);
-            tt.play();
-        }
+            for (int i = 0; i < shooters.length; i++) {
+                TranslateTransition tt = new TranslateTransition(Duration.seconds(4), shooters[i]);
+                tt.setAutoReverse(true);
+                tt.setCycleCount(TranslateTransition.INDEFINITE);
+                tt.setByX(80);
+                tt.play();
+            }
+        });
     }
 
     public void stop() {

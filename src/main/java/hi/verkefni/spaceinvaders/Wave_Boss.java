@@ -3,6 +3,9 @@ package hi.verkefni.spaceinvaders;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
 import javafx.animation.TranslateTransition;
+import javafx.scene.control.ProgressBar;
+import javafx.scene.paint.Color;
+import javafx.scene.shape.Rectangle;
 import javafx.util.Duration;
 
 import java.util.Random;
@@ -12,8 +15,11 @@ public class Wave_Boss {
     private double degreeForCone;
     private Random spreadDegree;
     private Timeline battle;
+    private Timeline healthTimeline;
+    private ProgressBar healthBar;
     public Wave_Boss(Leikbord leikbord) {
 
+        //Adding Boss to the screen
         Alien_three boss = new Alien_three();
         leikbord.setBoss(boss);
 
@@ -21,6 +27,18 @@ public class Wave_Boss {
         boss.setTranslateY(-100);
 
         leikbord.getChildren().add(boss);
+
+        //Adding health bar.
+        healthBar = new ProgressBar(1.0);
+        healthBar.setPrefSize(400, 20);
+        healthBar.setTranslateX(100);
+        healthBar.setTranslateY(50);
+        healthBar.setStyle("-fx-accent: red;");
+
+        healthTimeline = new Timeline(new KeyFrame(Duration.millis(20), e -> {
+            healthBar.setProgress((double) leikbord.getBoss().getBossLife() / 2250);
+        }));
+        healthTimeline.setCycleCount(Timeline.INDEFINITE);
 
         //Boss entering the screen movement
         Timeline entering = new Timeline(new KeyFrame(Duration.millis(160), e -> {
@@ -77,7 +95,7 @@ public class Wave_Boss {
             //Phase 2
             else if (boss.getBossLife() > 750) {
 
-                int rndmnumber = random.nextInt(3);
+                int rndmnumber = random.nextInt(4);
 
                 if (rndmnumber == 1) {
                     boss.BigShoot(leikbord);
@@ -96,7 +114,7 @@ public class Wave_Boss {
             //Phase 3
             else {
 
-                int rndmnumber = random.nextInt(4);
+                int rndmnumber = random.nextInt(6);
 
                 if (rndmnumber == 1) {
                     boss.BigShoot(leikbord);
@@ -105,7 +123,7 @@ public class Wave_Boss {
                     tt.pause();
                     boss.ChargeAttack(leikbord, tt);
                 }
-                else if (rndmnumber == 3) {
+                else if (rndmnumber == 3 || rndmnumber == 4) {
                     tt.pause();
                     Tripleshot.play();
                     Tripleshot.setOnFinished(e2 -> tt.play());
@@ -124,6 +142,8 @@ public class Wave_Boss {
         //When boss is done entering it starts battle, back and forth movement
         entering.setOnFinished(e -> {
             ttEntering.play();
+            leikbord.getChildren().add(healthBar);
+            healthTimeline.play();
             battle.play();
         });
         ttEntering.setOnFinished(e -> {
@@ -134,5 +154,10 @@ public class Wave_Boss {
 
     public void stop() {
         battle.stop();
+        healthTimeline.stop();
+    }
+
+    public ProgressBar getHealthBar() {
+        return this.healthBar;
     }
 }

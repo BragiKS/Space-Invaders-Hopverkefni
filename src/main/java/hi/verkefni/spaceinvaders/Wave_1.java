@@ -29,12 +29,14 @@ public class Wave_1 {
         alienTimeline.play();
 
         // Translate transitions for aliens
-        for (int i = 0; i < aliens.length; i++) {
-            TranslateTransition tt = new TranslateTransition(Duration.seconds(4), aliens[i]);
-            tt.setAutoReverse(true);
-            tt.setCycleCount(TranslateTransition.INDEFINITE);
-            tt.setByX(80);
-            tt.play();
-        }
+        alienTimeline.setOnFinished(e -> {
+            for (int i = 0; i < aliens.length; i++) {
+                TranslateTransition tt = new TranslateTransition(Duration.seconds(4), aliens[i]);
+                tt.setAutoReverse(true);
+                tt.setCycleCount(TranslateTransition.INDEFINITE);
+                tt.setByX(80);
+                tt.play();
+            }
+        });
     }
 }
