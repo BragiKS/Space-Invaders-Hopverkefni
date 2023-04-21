@@ -32,16 +32,17 @@ public class Heart extends ImageView {
 
     public void removeHeart(Leikbord leikbord) {
         if (heartCounter == 3) {
-            leikbord.getChildren().remove(three);
+            three.setVisible(false);
         } else if (heartCounter == 2) {
-            leikbord.getChildren().remove(two);
+            two.setVisible(false);
         } else {
-            leikbord.getChildren().remove(one);
+            one.setVisible(false);
         }
         heartCounter--;
     }
 
     public void addHearts() {
+        heartCounter = 3;
         three.setVisible(true);
         two.setVisible(true);
         one.setVisible(true);

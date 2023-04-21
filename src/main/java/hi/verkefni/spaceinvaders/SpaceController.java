@@ -53,9 +53,6 @@ public class SpaceController {
 
     public void startGame() {
 
-        lifeCounter = new Heart(fxLeikbord);
-        lifeCounter.addHearts();
-
         KeyFrame k = new KeyFrame(Duration.millis(10),
                 e -> {
                     checkCollisions();
@@ -284,6 +281,7 @@ public class SpaceController {
         playerLife = 3;
         bossDead = false;
         Wavecounter = 1;
+        lifeCounter.addHearts();
         leikur.nyrLeikur();
         audio.sfxPlayAudio();
         ViewSwitcher.switchTo(View.SHOOTING);
@@ -294,7 +292,7 @@ public class SpaceController {
     public void initialize(){
         fxLeikbord.setSc(this);
 
-
+        lifeCounter = new Heart(fxLeikbord);
         leikur = new Leikur();      // búa til vinnsluna
         fxStig.textProperty().bind(leikur.stiginProperty().asString()); // binda stigin við viðmótið
         fxStig.setFocusTraversable(false);
