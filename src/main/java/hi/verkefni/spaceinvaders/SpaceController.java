@@ -47,7 +47,7 @@ public class SpaceController {
 
 
 
-    public Leikbord getFxLeikbord () {
+    public Leikbord getFxLeikbord() {
         return fxLeikbord;
     }
 
@@ -58,17 +58,14 @@ public class SpaceController {
                     checkCollisions();
                     playerCollision();
                     if (Wavecounter == 5 && !bossDead) {
-
+                        bossCollision();
+                    }
                     if(playerLife == 2) {
                         fxLeikbord.removeHeartThree();
                     }
 
                     if(playerLife == 1) {
                         fxLeikbord.removeHeartTwo();
-                    }
-
-                    if (Wavecounter == 5) {
-                        bossCollision();
                     }
                     if (playerLife == 0) {
                         //GAMEOVER!
