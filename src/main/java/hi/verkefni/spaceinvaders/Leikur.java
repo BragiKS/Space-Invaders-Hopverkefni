@@ -28,6 +28,4 @@ public class Leikur {
         stigin.setValue(0);
     }
 
-    public void increaseScore() {
-    }
 }
