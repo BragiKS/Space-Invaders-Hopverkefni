@@ -15,7 +15,8 @@
         <ImageView fitHeight="610.0" fitWidth="607.0" layoutX="-6.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@img/victory.jpg" />
-         </image></ImageView>
+         </image>
+        </ImageView>
         <Button fx:id="playagain" layoutX="166.0" layoutY="500.0" mnemonicParsing="false" onMouseClicked="#playagain" prefHeight="25.0" prefWidth="270.0" style="-fx-background-color: #fcda00;" stylesheets="@styles.css" text="Play Again?" textAlignment="CENTER">
             <font>
                 <Font name="Yu Gothic Light" size="26.0" />

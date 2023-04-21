@@ -40,13 +40,13 @@ public class SpaceController {
 
     private boolean canBeHit = true;
 
-    private int Wavecounter = 1; // Set to 1
+    private int Wavecounter = 4; // Set to 1
 
     private final double shootCooldown = 0.2; // Cooldown duration in seconds //set it to 0.5
 
     private final double shieldTime = 3;
 
-    private int playerLife = 2;
+    private int playerLife = 20;// Set to 3
 
     Leikur leikur;
 
@@ -97,12 +97,11 @@ public class SpaceController {
                         Wavecounter++;
                     }
                     if (fxLeikbord.allEnemiesDestroyed() && Wavecounter == 4) {
-                        wave3.stop();
+                        //wave3.stop();
                         audio.stop();
                         audio.bossSound();
                         bosswave = new Wave_Boss(fxLeikbord);
                         Wavecounter++;
-                        //Boss music maybe?
                     }
                 });
         time = new Timeline(k);
