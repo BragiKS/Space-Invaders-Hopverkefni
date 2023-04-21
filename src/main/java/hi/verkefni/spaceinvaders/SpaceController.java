@@ -40,13 +40,15 @@ public class SpaceController {
 
     private boolean canBeHit = true;
 
-    private int Wavecounter = 4; // Set to 1
+    private boolean bossDead = false;
 
-    private final double shootCooldown = 0.2; // Cooldown duration in seconds //set it to 0.5
+    private int Wavecounter = 1; // Set to 1
+
+    private final double shootCooldown = 0.4; // Cooldown duration in seconds //set it to 0.4
 
     private final double shieldTime = 3;
 
-    private int playerLife = 20;// Set to 3
+    private int playerLife = 3;// Set to 3
 
     Leikur leikur;
 
@@ -61,12 +63,14 @@ public class SpaceController {
                 e -> {
                     checkCollisions();
                     playerCollision();
-                    if (Wavecounter == 5) {
+                    if (Wavecounter == 5 && !bossDead) {
                         bossCollision();
                     }
                     if (playerLife == 0) {
                         //GAMEOVER!
                         ViewSwitcher.switchTo(View.OVER);
+                        GameOverController gc = (GameOverController) ViewSwitcher.lookup(View.OVER);
+                        gc.setFinalScoreLose();
                         audio.stop();
                         audio.gameOverAudio();
                         switch (Wavecounter) {
@@ -97,7 +101,7 @@ public class SpaceController {
                         Wavecounter++;
                     }
                     if (fxLeikbord.allEnemiesDestroyed() && Wavecounter == 4) {
-                        //wave3.stop();
+                        wave3.stop();
                         audio.stop();
                         audio.bossSound();
                         bosswave = new Wave_Boss(fxLeikbord);
@@ -113,10 +117,15 @@ public class SpaceController {
 
     private void victory() {
         //Here we need to end the game with maybe a victory screen or just use gameover
+
+        leikur.bossKilled();
+
         audio.stop();
         audio.victorySound();
-        ViewSwitcher.switchTo(View.VICTORY);
 
+        ViewSwitcher.switchTo(View.VICTORY);
+        GameOverController gc = (GameOverController) ViewSwitcher.lookup(View.VICTORY);
+        gc.setFinalScore();
     }
 
     /**
@@ -151,15 +160,7 @@ public class SpaceController {
     }
 
 
-    public void initialize(){
-        fxLeikbord.setSc(this);
 
-
-        leikur = new Leikur();      // búa til vinnsluna
-        fxStig.textProperty().bind(leikur.stiginProperty().asString()); // binda stigin við viðmótið
-        fxStig.setFocusTraversable(false);    // ekki hægt að focus-a á stigin
-
-    }
 
     public void playerCollision() {
         List<ImageView> lasersToRemove = new ArrayList<>();
@@ -250,6 +251,7 @@ public class SpaceController {
                 fxLeikbord.getBoss().decreaseLife();
                 System.out.println("Boss Health: "+ fxLeikbord.getBoss().getBossLife());
                 if (fxLeikbord.getBoss().getBossLife() <= 0) {
+                    bossDead = true;
                     fxLeikbord.getChildren().remove(fxLeikbord.getBoss());
                     bosswave.stop();
                     victory();
@@ -280,11 +282,24 @@ public class SpaceController {
 
 
         playerLife = 3;
+        bossDead = false;
         Wavecounter = 1;
         leikur.nyrLeikur();
         audio.sfxPlayAudio();
         ViewSwitcher.switchTo(View.SHOOTING);
         time.play();
+
+    }
+
+    public void initialize(){
+        fxLeikbord.setSc(this);
+
+
+        leikur = new Leikur();      // búa til vinnsluna
+        fxStig.textProperty().bind(leikur.stiginProperty().asString()); // binda stigin við viðmótið
+        fxStig.setFocusTraversable(false);
+        // ekki hægt að focus-a á stigin
+
 
     }
 }

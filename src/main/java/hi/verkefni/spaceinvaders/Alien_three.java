@@ -7,7 +7,7 @@ import javafx.scene.image.ImageView;
 import javafx.util.Duration;
 
 public class Alien_three extends ImageView {
-    private int bossLife = 700; //Set to 2250
+    private int bossLife = 2250; //Set to 2250
     public Alien_three() {
         FXML_Lestur.lesa(this, "alien3-view.fxml");
     }
